@@ -30,11 +30,9 @@
   \cfoot{\thepage}
   \rfoot{}
   \renewcommand{\footrulewidth}{0pt} }
-\header\firstFooter
 
 \usepackage{datetime}
-\yyyymmdddate
-\newdateformat{yyyymmdate}{{\THEMONTH}/'\twodigit{\THEYEAR}}
+\newdateformat{yyyymmdate}{\twodigit{\THEMONTH}/\twodigit{\THEYEAR}}
 
 \usepackage{multirow}
 
@@ -63,6 +61,8 @@
 \newcommand{\ibmTjWatson}{IBM T.\ J.\ Watson Research Center\xspace}
 
 \begin{document}
+\ddmmyyyydate
+\header\firstFooter
 
 \subsection*{Education}
 \newcommand\entry[5]{#1, #2 & #3 & #4, #5\\}
@@ -76,7 +76,7 @@
 \begin{longtabu}{lX[c]r}
   \entry{Postdoctoral Researcher}{Reliability and Power Aware Microarchitectures}{\ibmTjWatson, NY}{\formatdate{27}{8}{16}--present}
   \entry{Space Technology Research Fellow}{Robotic Systems Estimation, Decision, and Control}{NASA Jet Propulsion Lab, Pasadena, CA}{\multirow{3}{*}{\shortstack{\formatdate{04}{05}{15}--\formatdate{01}{07}{15} \\ \formatdate{02}{06}{14}--\formatdate{22}{08}{14} \\ \formatdate{03}{06}{13}--\formatdate{23}{08}{13}}}}\\
-  \entry{Graduate Technical Intern}{Server Memory Controller Validation}{Intel Corporation, Hudson, MA}{\formatdate{16}{05}{11}--\formatdate{09}{18}{11}}
+  \entry{Graduate Technical Intern}{Server Memory Controller Validation}{Intel Corporation, Hudson, MA}{\formatdate{16}{05}{11}--\formatdate{18}{09}{11}}
   \entry{Graduate Technical Intern}{Data Center and Connected Systems}{Intel Corporation, Hudson, MA}{\formatdate{20}{07}{10}--\formatdate{27}{08}{10}}
   \entry{Undergraduate Teaching Assistant}{Undergraduate Logic Design}{Boston University}{\multirow{2}{*}{\shortstack{\formatdate{01}{01}{10}--\formatdate{01}{05}{10} \\ \formatdate{01}{01}{09}--\formatdate{01}{05}{09}}}}
 \end{longtabu}
@@ -143,7 +143,7 @@
 \subsubsection*{Demonstrations}
 \printbibliography[heading=none, resetnumbers=true, keyword={demo}]
 
-\subsection*{Technical Reports}
+\subsubsection*{Technical Reports}
 \printbibliography[heading=none, resetnumbers=true, type={report}]
 
 \subsubsection*{Theses}

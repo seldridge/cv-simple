@@ -74,7 +74,8 @@
 \subsection*{Employment History}
 \renewcommand\entry[4]{#1 & \multirow{2}{*}{\shortstack[c]{#2\\#3}} & {\yyyymmdate #4}\\\\}
 \begin{longtabu}{lX[c]r}
-  \entry{Research Staff Member}{Reliability and Power Aware Microarchitectures}{\ibmTjWatson, NY}{\formatdate{02}{02}{2019}--present}
+  \entry{Senior Staff Compiler Engineer}{Platform Engineering}{SiFive, San Mateo, CA}{\formatdate{14}{9}{2020}--present}
+  \entry{Research Staff Member}{Reliability and Power Aware Microarchitectures}{\ibmTjWatson, NY}{\formatdate{02}{02}{2019}--\formatdate{11}{9}{2020}}
   \entry{Postdoctoral Researcher}{Reliability and Power Aware Microarchitectures}{\ibmTjWatson, NY}{\formatdate{27}{8}{16}--\formatdate{02}{02}{2019}}
   \entry{Space Technology Research Fellow}{Robotic Systems Estimation, Decision, and Control}{NASA Jet Propulsion Lab, Pasadena, CA}{\multirow{3}{*}{\shortstack{\formatdate{04}{05}{15}--\formatdate{01}{07}{15} \\ \formatdate{02}{06}{14}--\formatdate{22}{08}{14} \\ \formatdate{03}{06}{13}--\formatdate{23}{08}{13}}}}\\
   \entry{Graduate Technical Intern}{Server Memory Controller Validation}{Intel Corporation, Hudson, MA}{\formatdate{16}{05}{11}--\formatdate{18}{09}{11}}
@@ -95,7 +96,7 @@
 \subsection*{Grants}
 \renewcommand\entry[4]{#1 & #2 & #3 & {#4}\\}
 \begin{longtabu} to \textwidth {X[l]lllr}
-  \entry{DSSoC: Domain Specific System on Chip}{DARPA}{Staff}{\formatdate{01}{08}{2018}--present}
+  \entry{DSSoC: Domain Specific System on Chip}{DARPA}{Staff}{\formatdate{01}{08}{2018}--\formatdate{11}{09}{2020}}
   \entry{PERFECT: Efficient Resilience in Embedded Computing}{DARPA}{Staff}{\formatdate{27}{08}{2016}--\formatdate{31}{08}{2018}}
 \end{longtabu}
 
@@ -116,27 +117,27 @@
 \subsubsection*{Author}
 \renewcommand\entry[5]{\href{https://github.com/#1/#2}{\texttt{#1/#2}} & #3 & #4 & \ifthenelse{\equal{#5}{0}}{}{#5 Stars}\\}
 \begin{longtabu} to \textwidth {llXr}
-  \entry{seldridge}{verilog}{Verilog}{Repository for basic (and not so basic) Verilog blocks with high re-use potential}{262}
-  \entry{bu-icsg}{dana}{Scala}{Dynamically Allocated Neural Network Accelerator for the \riscv Rocket Microprocessor in Chisel}{149}
-  \entry{seldridge}{rocket-rocc-examples}{C}{Tests for example Rocket Custom Coprocessors}{44}
-  \entry{IBM}{rocc-software}{C}{C/Assembly macros for talking with Rocket Custom Coprocessors (RoCCs)}{37}
-  \entry{IBM}{hdl-tools}{Tcl}{Facilitates building open source tools for working with hardware description languages (HDLs)}{32}
-  \entry{IBM}{chiffre}{Scala}{A fault-injection framework using Chisel and FIRRTL}{22}
-  \entry{IBM}{perfect-chisel}{Scala}{Chisel artifacts developed under IBM's involvement with the DARPA PERFECT program}{21}
-  \entry{IBM}{firrtl-mode}{Emacs Lisp}{Major mode for editing FIRRTL files in Emacs}{1}
+  \entry{seldridge}{verilog}{Verilog}{Repository for basic (and not so basic) Verilog blocks with high re-use potential}{274}
+  \entry{bu-icsg}{dana}{Scala}{Dynamically Allocated Neural Network Accelerator for the \riscv Rocket Microprocessor in Chisel}{158}
+  \entry{seldridge}{rocket-rocc-examples}{C}{Tests for example Rocket Custom Coprocessors}{47}
+  \entry{IBM}{rocc-software}{C}{C/Assembly macros for talking with Rocket Custom Coprocessors (RoCCs)}{42}
+  \entry{IBM}{hdl-tools}{Tcl}{Facilitates building open source tools for working with hardware description languages (HDLs)}{33}
+  \entry{IBM}{chiffre}{Scala}{A fault-injection framework using Chisel and FIRRTL}{23}
+  \entry{IBM}{firrtl-mode}{Emacs Lisp}{Major mode for editing FIRRTL files in Emacs}{2}
   \entry{seldridge}{make-markdown}{Shell}{Collecting personal knowledge in Markdown}{0}
 \end{longtabu}
 
 \subsubsection*{Maintainer}
 \renewcommand\entry[7]{\href{https://github.com/#1/#2}{\texttt{#1/#2}} & #3 & #4 & #5 \ifthenelse{\equal{#5}{1}}{commit}{commits} \textcolor{Greens9p6}{\texttt{#6++}} \textcolor{Reds9p7}{\texttt{#7--}}\\}
 \begin{longtabu} to \textwidth {llX[l]r}
-  \entry{freechipsproject}{firrtl}{Scala}{Flexible Intermediate Representation for RTL}{169}{16005}{5368}
-  \entry{freechipsproject}{chisel3}{Scala}{Constructing Hardware in a Scala Embedded Language version 3}{145}{7187}{2938}
+  \entry{chipsalliance}{firrtl}{Scala}{Flexible Intermediate Representation for RTL}{182}{16817}{5516}
+  \entry{chipsalliance}{chisel3}{Scala}{Constructing Hardware in a Scala Embedded Language version 3}{150}{7606}{3077}
 \end{longtabu}
 
 \subsubsection*{Contributor}
 \begin{longtabu} to \textwidth {llX[l]r}
   \entry{chipsalliance}{rocket-chip}{Scala}{Rocket Chip Generator}{34}{766}{257}
+  \entry{llvm}{circt}{C++}{Circuit IR Compilers and Tools}{12}{911}{147}
   \entry{riscv}{riscv-fesvr}{C}{\riscv Frontend Server}{9}{298}{148}
   \entry{riscv}{riscv-tools}{Shell}{\riscv Tools (GNU Toolchain, ISA Simulator, Tests)}{3}{3}{3}
   \entry{ucb-bar}{chisel2-deprecated}{Scala}{Constructing Hardware in a Scala Embedded Language version 2}{2}{17}{3}
@@ -174,8 +175,8 @@
 \subsection*{Panel Participation}
 \renewcommand\entry[5]{\multirow{2}{*}{\shortstack[l]{#1: ``#2''\\\quad#3}} & \multirow{2}{*}{\shortstack[r]{#4\\#5}}\\\\}
 \begin{longtabu} to \textwidth {Xr}
-  \entry{Panelist}{Open Discussion -- Current State of \riscv Research}{1st Workshop on Computer Architecture Research with \riscv (CARRV)}{\formatdate{14}{10}{2017}}{Boston, MA}
   \entry{Panelist}{Building Efficient and Resilient AI Systems}{3rd Workshop on Cognitive Architectures}{\formatdate{24}{03}{2018}}{Williamsburg, VA}
+  \entry{Panelist}{Open Discussion -- Current State of \riscv Research}{1st Workshop on Computer Architecture Research with \riscv (CARRV)}{\formatdate{14}{10}{2017}}{Boston, MA}
 \end{longtabu}
 
 \subsection*{Thesis Committees}

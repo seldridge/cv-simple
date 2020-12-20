@@ -58,7 +58,8 @@
 \setlength\extrarowheight{1ex}
 
 \newcommand{\riscv}{RISC-V\xspace}
-\newcommand{\ibmTjWatson}{IBM T.\ J.\ Watson Research Center\xspace}
+\newcommand{\TjWatson}{T.\ J.\ Watson Research Center\xspace}
+\newcommand{\ibmTjWatson}{IBM \TjWatson}
 
 \begin{document}
 \yyyymmdddate
@@ -72,29 +73,29 @@
 \end{tabu}
 
 \subsection*{Employment History}
-\renewcommand\entry[4]{#1 & \multirow{2}{*}{\shortstack[c]{#2\\#3}} & {\yyyymmdate #4}\\\\}
+\renewcommand\entry[4]{\multirow{2}{*}{\shortstack[l]{#1\\\emph{#2}}} & #3 & {\yyyymmdate #4}\\\\}
 \begin{longtabu}{lX[c]r}
-  \entry{Senior Staff Compiler Engineer}{Platform Engineering}{SiFive, San Mateo, CA}{\formatdate{14}{9}{2020}--present}
-  \entry{Research Staff Member}{Reliability and Power Aware Microarchitectures}{\ibmTjWatson, NY}{\formatdate{02}{02}{2019}--\formatdate{11}{9}{2020}}
-  \entry{Postdoctoral Researcher}{Reliability and Power Aware Microarchitectures}{\ibmTjWatson, NY}{\formatdate{27}{8}{16}--\formatdate{02}{02}{2019}}
-  \entry{Space Technology Research Fellow}{Robotic Systems Estimation, Decision, and Control}{NASA Jet Propulsion Lab, Pasadena, CA}{\multirow{3}{*}{\shortstack{\formatdate{04}{05}{15}--\formatdate{01}{07}{15} \\ \formatdate{02}{06}{14}--\formatdate{22}{08}{14} \\ \formatdate{03}{06}{13}--\formatdate{23}{08}{13}}}}\\
-  \entry{Graduate Technical Intern}{Server Memory Controller Validation}{Intel Corporation, Hudson, MA}{\formatdate{16}{05}{11}--\formatdate{18}{09}{11}}
-  \entry{Graduate Technical Intern}{Data Center and Connected Systems}{Intel Corporation, Hudson, MA}{\formatdate{20}{07}{10}--\formatdate{27}{08}{10}}
-  \entry{Undergraduate Teaching Assistant}{Undergraduate Logic Design}{Boston University}{\multirow{2}{*}{\shortstack{\formatdate{01}{01}{10}--\formatdate{01}{05}{10} \\ \formatdate{01}{01}{09}--\formatdate{01}{05}{09}}}}
+  \entry{SiFive}{Senior Staff Compiler Engineer}{San Mateo, CA}{\formatdate{14}{9}{2020}--present}
+  \entry{IBM}{Research Staff Member}{Yorktown Heights, NY}{\formatdate{02}{02}{2019}--\formatdate{11}{9}{2020}}
+  \entry{IBM}{Postdoctoral Researcher}{Yorktown Heights, NY}{\formatdate{27}{8}{2016}--\formatdate{02}{02}{2019}}
+  \entry{NASA}{Space Technology Research Fellow}{Pasadena, CA}{\multirow{3}{*}{\shortstack{\formatdate{04}{05}{2015}--\formatdate{01}{07}{2015} \\ \formatdate{02}{06}{2014}--\formatdate{22}{08}{2014} \\ \formatdate{03}{06}{2013}--\formatdate{23}{08}{2013}}}}\\
+  \entry{Intel Corporation}{Graduate Technical Intern}{Hudson, MA}{\formatdate{16}{05}{2011}--\formatdate{18}{09}{2011}}
+  \entry{Intel Corporation}{Graduate Technical Intern}{Hudson, MA}{\formatdate{20}{07}{2010}--\formatdate{27}{08}{2010}}
+  \entry{Boston University}{Undergraduate Teaching Assistant}{Boston, MA}{\multirow{2}{*}{\shortstack{\formatdate{01}{01}{2010}--\formatdate{01}{05}{2010} \\ \formatdate{01}{01}{2009}--\formatdate{01}{05}{2009}}}}
 \end{longtabu}
 
 \subsection*{Honors, Awards, and Fellowships}
 \renewcommand\entry[2]{#1 & {\yyyymmdate #2}\\}
 \begin{longtabu} to \textwidth {X[l]r}
-  \entry{NASA Space Technology Research Fellowship}{\formatdate{01}{08}{12}--\formatdate{01}{08}{16}}
-  \entry{CELEST/CompNet Award}{\yyyymmdddate \formatdate{23}{04}{2012}}
-  \entry{Boston University Dean's Fellowship}{\formatdate{08}{09}{10}--\formatdate{08}{09}{11}}
-  \entry{P.~T.~Hsu Memorial Award for Outstanding Senior Design Project}{\yyyymmdddate\formatdate{03}{05}{2010}}
-  \entry{Boston University Engineering Scholar Award}{\formatdate{01}{09}{06}--\formatdate{15}{05}{10}}
+  \entry{NASA Space Technology Research Fellowship}{\formatdate{01}{08}{2012}--\formatdate{01}{08}{2016}}
+  \entry{CELEST/CompNet Award}{\formatdate{23}{04}{2012}}
+  \entry{Boston University Dean's Fellowship}{\formatdate{08}{09}{2010}--\formatdate{08}{09}{2011}}
+  \entry{P.~T.~Hsu Memorial Award for Outstanding Senior Design Project}{\formatdate{03}{05}{2010}}
+  \entry{Boston University Engineering Scholar Award}{\formatdate{01}{09}{2006}--\formatdate{15}{05}{2010}}
 \end{longtabu}
 
 \subsection*{Grants}
-\renewcommand\entry[4]{#1 & #2 & #3 & {#4}\\}
+\renewcommand\entry[4]{#1 & #2 & #3 & {\yyyymmdate #4}\\}
 \begin{longtabu} to \textwidth {X[l]lllr}
   \entry{DSSoC: Domain Specific System on Chip}{DARPA}{Staff}{\formatdate{01}{08}{2018}--\formatdate{11}{09}{2020}}
   \entry{PERFECT: Efficient Resilience in Embedded Computing}{DARPA}{Staff}{\formatdate{27}{08}{2016}--\formatdate{31}{08}{2018}}
@@ -173,7 +174,7 @@
 \printbibliography[heading=none, resetnumbers=true, keyword={workshop}]
 
 \subsection*{Panel Participation}
-\renewcommand\entry[5]{\multirow{2}{*}{\shortstack[l]{#1: ``#2''\\\quad#3}} & \multirow{2}{*}{\shortstack[r]{#4\\#5}}\\\\}
+\renewcommand\entry[5]{\multirow{2}{*}{\shortstack[l]{#1: ``#2''\\\quad#3}} & \multirow{2}{*}{\shortstack[r]{{\yyyymmdate #4}\\#5}}\\\\}
 \begin{longtabu} to \textwidth {Xr}
   \entry{Panelist}{Building Efficient and Resilient AI Systems}{3rd Workshop on Cognitive Architectures}{\formatdate{24}{03}{2018}}{Williamsburg, VA}
   \entry{Panelist}{Open Discussion -- Current State of \riscv Research}{1st Workshop on Computer Architecture Research with \riscv (CARRV)}{\formatdate{14}{10}{2017}}{Boston, MA}

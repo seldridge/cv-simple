@@ -1,0 +1,332 @@
+bibliography: ../src/bib/schuyler.bib
+person:
+  name: Schuyler Eldridge
+  email: schuyler.eldridge@gmail.com
+github: seldridge
+location: New York, NY
+advisor:
+  name: Ajay Joshi
+  institution: Boston University
+education:
+  - school: Boston University
+    location: Boston, MA
+    major: Computer Engineering
+    degree: Ph. D
+    year: 2016
+  - school: Boston University
+    location: Boston, MA
+    major: Electrical Engineering
+    degree: B. S.
+    year: 2016
+employment:
+  - company: SiFive
+    title: Senior Staff Engineer
+    location: San Mateo, CA
+    remote: true
+    dates:
+      - start: {year: 2020, month: 9, day: 14}
+  - company: IBM
+    title: Research Staff Member
+    location: Yorktown Heights, NY
+    dates:
+      - start: {day: 02, month: 02, year: 2019}
+        end:   {day: 11, month: 09, year: 2020}
+  - company: IBM
+    title: Postdoctoral Researcher
+    location: Yorktown Heights, NY
+    dates:
+      - start: {day: 27, month: 08, year: 2016}
+        end:   {day: 02, month: 02, year: 2019}
+  - company: NASA
+    title: Space Technology Research Fellow
+    location: Pasadena, CA
+    dates:
+      - start: {day: 04, month: 05, year: 2015}
+        end:   {day: 01, month: 07, year: 2015}
+      - start: {day: 02, month: 06, year: 2014}
+        end:   {day: 22, month: 08, year: 2014}
+      - start: {day: 03, month: 06, year: 2013}
+        end:   {day: 23, month: 08, year: 2013}
+  - company: Intel Corporation
+    title: Graduate Technical Intern
+    location: Hudson, MA
+    dates:
+      - start: {day: 16, month: 05, year: 2011}
+        end:   {day: 18, month: 09, year: 2011}
+      - start: {day: 20, month: 07, year: 2010}
+        end:   {day: 27, month: 08, year: 2010}
+  - company: Boston University
+    title: Undergraduate Teaching Assistant
+    location: Boston, MA
+    dates:
+      - start: {day: 01, month: 01, year: 2010}
+        end:   {day: 01, month: 05, year: 2010}
+      - start: {day: 01, month: 01, year: 2009}
+        end:   {day: 01, month: 05, year: 2009}
+awards:
+  - name: NASA Space Technology Research Fellowship
+    date:
+      start: {day: 01, month: 08, year: 2012}
+      end:   {day: 01, month: 08, year: 2016}
+  - name: CELEST/CompNet Award
+    date: {day: 23, month: 04, year: 2012}
+  - name: Boston University Dean's Fellowship
+    date:
+      start: {day: 08, month: 09, year: 2010}
+      end:   {day: 08, month: 09, year: 2011}
+  - name: P. T. Hsu Memorial Award for Outstanding Senior Design Project
+    date: {day: 03, month: 05, year: 2010}
+  - name: Boston University Engineering Scholar Award
+    date:
+      start: {day: 01, month: 09, year: 2006}
+      end:   {day: 15, month: 05, year: 2010}
+grants:
+  - agency: DARPA
+    name: DSSoC
+    number: HR001118C0122
+    role: Staff
+    date:
+      start: {day: 01, month: 08, year: 2018}
+      end:   {day: 11, month: 09, year: 2020}
+  - agency: DARPA
+    name: PERFECT
+    number: HR001113C0022
+    role: Staff
+    date:
+      start: {day: 27, month: 08, year: 2016}
+      end:   {day: 31, month: 09, year: 2018}
+service:
+  - name: IEEE Transactions on Computers
+    role: Article Reviewer
+    year: 2022
+  - name: Chisel Community Conference China (CCCC)
+    role: Program Committee
+    year: 2021
+  - name: Future of Computing Architectures (FOCA) Workshop
+    role: Selection Committee
+    year: 2020
+  - name: Chisel Community Conference (CCC)
+    role: Program Committee
+    year: 2018
+  - name: IEEE Micro
+    role: Article Reviewer
+    year: 2018
+  - name: IEEE Micro
+    role: Article Reviewer
+    year: 2016
+maintainer:
+  - organization: llvm
+    repository: circt
+    host: https://github.com
+    languages:
+      - \CC
+      - MLIR
+    description: CIRCT IR Compilers and Tools \cite{none:conf/FCCM/Eldridge/2022, none:conf/CCCC/Eldridge/2021, none:conf/WOSET/Eldridge/2021}
+    statistics:
+      commits: 410
+      additions: 33541
+      deletions: 13593
+  - organization: chipsalliance
+    repository: firrtl
+    host: https://github.com
+    languages:
+      - Scala
+    description: Circuit Intermediate Representation and Compiler \cite{none:conference/CCC/eldridge/2020/verilog-generation, none:workshop/CCC/eldridge-2018-annotations}
+    statistics:
+      commits: 200
+      additions: 17461
+      deletions: 9444
+  - organization: chipsalliance
+    repository: chisel3
+    host: https://github.com
+    languages:
+      - Scala
+    description: Scala-embedded hardware DSL \cite{none:conf/FCCM/Eldridge/2022, none:workshop/CCC/eldridge/2020/becoming-a-chisel-developer, none:workshop/CCC/eldridge-2018-libraries-intensive, eldridge:2018:modsim}
+    statistics:
+      commits: 158
+      additions: 8001
+      deletions: 3421
+  - organization: chipsalliance
+    repository: firrtl-spec
+    host: https://github.com
+    languages:
+      - Markdown
+    description: Specification for the FIRRTL language
+    statistics:
+      commits: 25
+      additions: 1177
+      deletions: 1375}
+contributor:
+  - organization: chipsalliance
+    repository: rocket-chip
+    host: https://github.com
+    languages:
+      - Scala
+    description: Rocket Chip Generator
+    statistics:
+      commits: 34
+      additions: 766
+      deletions: 257
+  - organization: riscv
+    repository: riscv-fesvr
+    host: https://github.com
+    languages:
+      - C
+    description: \riscv Frontend Server
+    statistics:
+      commits: 9
+      additions: 298
+      deletions: 148
+  - organization: riscv
+    repository: riscv-tools
+    host: https://github.com
+    languages:
+      - Shell
+    description: \riscv Tools (GNU Toolchain, ISA Simulator, Tests)
+    statistics:
+      commits: 3
+      additions: 3
+      deletions: 3
+  # - organization: freechipsproject
+  #   repository: chisel-testers
+  #   host: https://github.com
+  #   languages:
+  #     - Scala
+  #   description: Provides various testers for chisel users
+  #   statistics:
+  #     commits: 2
+  #     additions: 12
+  #     deletions: 4
+  # - organization: ucb-bar
+  #   repository: generator-bootcamp
+  #   host: https://github.com
+  #   languages:
+  #     - Scala
+  #   description: 'Generator Bootcamp Material: Learn Chisel the Right Way'
+  #   statistics:
+  #     commits: 2
+  #     additions: 8
+  #     deletions: 8
+  # - organization: ucb-bar
+  #   repository: chisel-testers2
+  #   host: https://github.com
+  #   languages:
+  #     - Scala
+  #   description: ChiselTest
+  #   statistics:
+  #     commits: 1
+  #     additions: 1
+  #     deletions: 1
+  # - organization: ccelio
+  #   repository: riscv-boom-doc
+  #   host: https://github.com
+  #   languages:
+  #     - \LaTeX
+  #   description: Documentation for the BOOM processor
+  #   statistics:
+  #     commits: 1
+  #     additions: 1
+  #     deletions: 1
+  # - organization: melpa
+  #   repository: melpa
+  #   host: https://github.com
+  #   languages:
+  #     - Emacs Lisp
+  #   description: Recipes and build machinery for the biggest Emacs package repo
+  #   statistics:
+  #     commits: 1
+  #     additions: 3
+  #     deletions: 0
+author:
+  - organization: seldridge
+    repository: verilog
+    host: https://github.com
+    languages:
+      - Verilog
+    description: Repository for basic (and not so basic) Verilog blocks with high re-use potential
+    stars: 390
+  - organization: bu-icsg
+    repository: dana
+    host: https://github.com
+    languages:
+      - Scala
+    description: Dynamically Allocated Neural Network Accelerator for the \riscv Rocket Microprocessor in Chisel \cite{thesis:eldridge, DBLP:conf/IEEEpact/EldridgeWSAJ15, none:poster/RISCV/eldridge-2016, none:conf/BARC/Eldridge-2016, none:poster/DAC/eldridge-2016}
+    stars: 178
+  - organization: seldridge
+    repository: rocket-rocc-examples
+    host: https://github.com
+    languages:
+      - C
+    description: Tests for example Rocket Custom Coprocessors
+    stars: 57
+  - organization: IBM
+    repository: hdl-tools
+    host: https://github.com
+    languages:
+      - Tcl
+    description: Facilitates building open source tools for working with hardware description languages (HDLs)
+    stars: 51
+  - organization: IBM
+    repository: rocc-software
+    host: https://github.com
+    languages:
+      - C
+    description: C/Assembly macros for talking with Rocket Custom Coprocessors (RoCCs)
+    stars: 48
+  - organization: sifive
+    repository: chisel-circt
+    host: https://github.com
+    languages:
+      - Scala
+    description: Library to compile Chisel circuits using CIRCT \cite{none:conf/CCCC/Eldridge/2021}
+    stars: 42
+  - organization: IBM
+    repository: chiffre
+    host: https://github.com
+    languages:
+      - Scala
+    description: A fault-injection framework using Chisel and FIRRTL \cite{eldridge:2018:carrv, none:demo/CogArch/Roelke-2018, eldridge:2018:gomactech:velour}
+    stars: 25
+  - organization: IBM
+    repository: esp-chisel-accelerators
+    host: https://github.com
+    languages:
+      - Scala
+    description: Embedded Scalable Platform accelerator socket \cite{none:keynote/FOSDEM/eldridge/2020/esp-chisel-accelerators}
+    stars: 17
+  - organization: IBM
+    repository: firrtl-mode
+    host: https://github.com
+    languages:
+      - Emacs Lisp
+    description: Major mode for editing FIRRTL files in Emacs
+    stars: 3
+  - organization: seldridge
+    repository: make-markdown
+    host: https://github.com
+    languages:
+      - Shell
+    description: Collecting personal knowledge in Markdown
+  - organization: seldridge
+    repository: cv-simple
+    host: https://github.com
+    languages:
+      - \LaTeX
+    description: Simple \LaTeX \xspace CV (this document)
+panels:
+  - role: Panelist
+    name: Building Efficient and Resilient AI Systems
+    event: 3rd Workshop on Cognitive Architectures
+    date: {day: 24, month: 03, year: 2018}
+    location: Williamsburg, VA
+  - role: Panelist
+    name: Open Discussion -- Current State of \riscv Research
+    event: 1st Workshop on Computer Architecture Research with \riscv (CARRV)
+    date: {day: 14, month: 10, year: 2017}
+    location: Boston, MA
+thesis-committees:
+  - student: Alec Roelke
+    title: Improving Reliability and Security with Aging and Pre-RTL Modeling
+    role: 4th Reader
+    degree: Ph. D
+    year: 2018

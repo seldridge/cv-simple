@@ -1,0 +1,227 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+\hypersetup {
+$if(person.name)$
+  pdfauthor={$person.name$},
+  pdftitle={$person.name$ -- CV},
+$endif$
+}
+
+\usepackage[
+  top=1in,
+  bottom=1in,
+  left=1in,
+  right=1in,
+]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\newcommand\header{
+  $if(person.name)$
+  \lhead{\textsc{$person.name$}}
+  $endif$
+  \chead{\textsc{Curriculum Vitae}}
+  \rhead{\textsc{Last Updated \today}}
+  \renewcommand{\headrulewidth}{0.5pt} }
+\newcommand\firstFooter{
+  $if(github)$
+  \lfoot{\href{https://github.com/$github$}{\textsc{$github$@github}}}
+  $endif$
+  $if(location)$
+  \cfoot{\textsc{$location/lowercase$}}
+  $endif$
+  $if(person.email)$
+  \rfoot{\href{mailto:$person.email$}{\textsc{$person.email$}}}
+  $endif$
+  \renewcommand{\footrulewidth}{0.5pt} }
+\newcommand\otherFooter{
+  \lfoot{}
+  \cfoot{\thepage}
+  \rfoot{}
+  \renewcommand{\footrulewidth}{0pt} }
+
+\usepackage{datetime}
+\newdateformat{yyyymmdate}{\twodigit{\THEMONTH}/\twodigit{\THEYEAR}}
+
+\usepackage{multirow}
+
+\usepackage{xspace}
+
+\usepackage{booktabs}
+
+\usepackage[
+  backend=biber,
+  maxbibnames=1024,
+  sorting=ydnt,
+  defernumbers=true,
+  sortcites
+]{biblatex}
+\addbibresource{$bibliography$}
+\DeclareRefcontext{conference}{labelprefix=C}
+\DeclareRefcontext{journal}{labelprefix=J}
+\DeclareRefcontext{patent}{labelprefix=P}
+\DeclareRefcontext{demonstration}{labelprefix=D}
+\DeclareRefcontext{technicalReport}{labelprefix=TR}
+\DeclareRefcontext{thesis}{labelprefix=Th}
+\DeclareRefcontext{workshop}{labelprefix=W}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+\usepackage{xcolor}
+\definecolor{Greens9p6}{rgb}{0.137254901960784,0.545098039215686,0.270588235294118}
+\definecolor{Reds9p7}{rgb}{0.647058823529412,0.0588235294117647,0.0823529411764706}
+
+\usepackage{tabularx}
+
+\usepackage{longtable}
+\setlength\extrarowheight{1ex}
+
+\newcommand{\riscv}{RISC-V\xspace}
+\newcommand{\TjWatson}{T.\ J.\ Watson Research Center\xspace}
+\newcommand{\ibmTjWatson}{IBM \TjWatson}
+\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
+
+\begin{document}
+\yyyymmdddate
+\header\firstFooter
+
+$if(education)$
+\subsection*{Education}
+\begin{tabularx}{\textwidth}{lXr}
+$for(education)$
+  $it.school$, $it.location$ & $it.major$ & $it.degree$, $it.year$ \\
+$endfor$
+\end{tabularx}
+$endif$
+
+$if(employment)$
+\subsection*{Employment History}
+$-- This command needs to generate, by default, two newlines due to the \multirow{2}.
+$-- Additional newlines after 2 will be generated at the end of the for loop.
+\newcommand\entry[4]{\multirow{2}{*}{\shortstack[l]{#1\\\emph{#2}}} & #3 & {\yyyymmdate #4}\\\\}
+\begin{tabularx}{\textwidth}{lXr}
+$for(employment)$
+  \entry{$it.company$}{$it.title$}{$it.location$ $if(it.remote)$ (remote)$endif$}{\multirow{$it.dates/length$}{*}{\shortstack{$for(it.dates)$\formatdate{$it.start.day$}{$it.start.month$}{$it.start.year$}--$if(it.end)$\formatdate{$it.end.day$}{$it.end.month$}{$it.end.year$}$else$present$endif$ $sep$\\$endfor$}}}
+$for(it.dates/rest/rest)$\\$endfor$
+$endfor$
+\end{tabularx}
+$endif$
+
+$if(awards)$
+\subsection*{Honors, Awards, and Fellowships}
+\renewcommand\entry[2]{#1 & {\yyyymmdate #2}\\}
+\begin{tabularx}{\textwidth}{Xlr}
+$for(awards)$
+  \entry{$it.name$}{$if(it.date.day)$\formatdate{$it.date.day$}{$it.date.month$}{$it.date.year$}$else$\formatdate{$it.date.start.day$}{$it.date.start.month$}{$it.date.start.year$}--\formatdate{$it.date.end.day$}{$it.date.end.month$}{$it.date.end.year$}$endif$}
+$endfor$
+\end{tabularx}
+$endif$
+
+$if(grants)$
+\subsection*{Grants}
+\begin{tabularx}{\textwidth}{lXXXr}
+$for(grants)$
+  $it.agency$ & $it.name$ & $it.number$ & $it.role$ & {\yyyymmdate \formatdate{$it.date.start.day$}{$it.date.start.month$}{$it.date.start.year$}--\formatdate{$it.date.end.day$}{$it.date.end.month$}{$it.date.end.year$}} \\
+$endfor$
+\end{tabularx}
+$endif$
+
+$if(service)$
+\subsection*{Program Committees and Reviews}
+\begin{tabularx}{\textwidth}{Xlr}
+$for(service)$
+  $it.name$ & $it.role$ & $it.year$ \\
+$endfor$
+\end{tabularx}
+$endif$
+
+\newpage
+\otherFooter
+
+\subsection*{Open Source Activities (GitHub)}
+
+$if(maintainer)$
+\subsubsection*{Maintainer}
+\newcommand\stats[3]{#1 \ifthenelse{\equal{#1}{1}}{commit}{commits} \textcolor{Greens9p6}{\texttt{#2++}} \textcolor{Reds9p7}{\texttt{#3--}}}
+\begin{tabularx}{\textwidth}{llXr}
+$for(maintainer)$
+  \href{$it.host$/$it.organization$/$it.repository$}{\texttt{$it.organization$/$it.repository$}} & $for(it.languages)$ $it$ $sep$, $endfor$ & $it.description$ & \stats{$it.statistics.commits$}{$it.statistics.additions$}{$it.statistics.deletions$} \\
+$endfor$
+\end{tabularx}
+$endif$
+
+$if(contributor)$
+\subsubsection*{Contributor}
+\begin{tabularx}{\textwidth}{llXr}
+$for(contributor)$
+  \href{$it.host$/$it.organization$/$it.repository$}{\texttt{$it.organization$/$it.repository$}} & $for(it.languages)$ $it$ $sep$ $endfor$ & $it.description$ & \stats{$it.statistics.commits$}{$it.statistics.additions$}{$it.statistics.deletions$} \\
+$endfor$
+\end{tabularx}
+$endif$
+
+$if(author)$
+\subsubsection*{Author}
+\begin{tabularx}{\textwidth}{llXr}
+$for(author)$
+  \href{$it.host$/$it.organization$/$it.repository$}{\texttt{$it.organization$/$it.repository$}} & $for(it.languages)$ $it$ $sep$ $endfor$ & $it.description$ $if(it.stars)$ & $it.stars$ Stars$endif$ \\
+$endfor$
+\end{tabularx}
+$endif$
+
+\subsection*{Publications}
+\nocite{*}
+
+\subsubsection*{Peer Reviewed Conference Publications}
+\newrefcontext{conference}
+\printbibliography[heading=none, resetnumbers=true, keyword={conference}]
+
+\subsubsection*{Peer Reviewed Journal Articles}
+\newrefcontext{journal}
+\printbibliography[heading=none, resetnumbers=true, keyword={journal}]
+
+\subsubsection*{Patents and Patent Applications}
+\newrefcontext{patent}
+\printbibliography[heading=none, resetnumbers=true, keyword={patent}]
+
+\subsubsection*{Demonstrations}
+\newrefcontext{demonstration}
+\printbibliography[heading=none, resetnumbers=true, keyword={demo}]
+
+\subsubsection*{Technical Reports}
+\newrefcontext{technicalReport}
+\printbibliography[heading=none, resetnumbers=true, type={report}]
+
+\subsubsection*{Theses}
+\newrefcontext{thesis}
+\printbibliography[heading=none, resetnumbers=true, keyword={thesis}]
+
+\subsection*{Workshop Talks and Posters}
+\newrefcontext{workshop}
+\printbibliography[heading=none, resetnumbers=true, keyword={workshop}]
+
+$if(panels)$
+\subsection*{Panel Participation}
+\renewcommand\entry[5]{\multirow{2}{*}{\shortstack[l]{#1: ``#2''\\\emph{#3}}} & \multirow{2}{*}{\shortstack[r]{{\yyyymmdate #4}\\#5}}\\\\}
+\begin{tabularx}{\textwidth}{Xr}
+  $for(panels)$
+  \entry{$it.role$}{$it.name$}{$it.event$}{\formatdate{$it.date.day$}{$it.date.month$}{$it.date.year$}}{$it.location$}
+  $endfor$
+\end{tabularx}
+$endif$
+
+$if(thesis-committees)$
+\subsection*{Thesis Committees}
+\begin{tabularx}{\textwidth}{lllXr}
+$for(thesis-committees)$
+  $it.role$ & $it.degree$ & $it.institution$ & $it.student$, ``$it.title$'' & $it.year$ \\
+$endfor$
+\end{tabularx}
+$endif$
+
+$if(advisor)$
+\subsection*{Doctoral Advisor}
+$advisor.name$ ($advisor.institution$)
+$endif$
+
+\end{document}

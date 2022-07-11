@@ -123,9 +123,9 @@ maintainer:
       - MLIR
     description: CIRCT IR Compilers and Tools \cite{none:conf/FCCM/Eldridge/2022, none:conf/CCCC/Eldridge/2021, none:conf/WOSET/Eldridge/2021}
     statistics:
-      commits: 410
-      additions: 33541
-      deletions: 13593
+      commits: 454
+      additions: 36838
+      deletions: 16474
   - organization: chipsalliance
     repository: firrtl
     host: https://github.com
@@ -153,9 +153,9 @@ maintainer:
       - Markdown
     description: Specification for the FIRRTL language
     statistics:
-      commits: 25
-      additions: 1177
-      deletions: 1375}
+      commits: 27
+      additions: 1180
+      deletions: 1378
 contributor:
   - organization: chipsalliance
     repository: rocket-chip
@@ -244,7 +244,7 @@ author:
     languages:
       - Verilog
     description: Repository for basic (and not so basic) Verilog blocks with high re-use potential
-    stars: 390
+    stars: 391
   - organization: bu-icsg
     repository: dana
     host: https://github.com
@@ -265,7 +265,7 @@ author:
     languages:
       - Tcl
     description: Facilitates building open source tools for working with hardware description languages (HDLs)
-    stars: 51
+    stars: 52
   - organization: IBM
     repository: rocc-software
     host: https://github.com
@@ -279,7 +279,7 @@ author:
     languages:
       - Scala
     description: Library to compile Chisel circuits using CIRCT \cite{none:conf/CCCC/Eldridge/2021}
-    stars: 42
+    stars: 48
   - organization: IBM
     repository: chiffre
     host: https://github.com

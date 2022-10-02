@@ -88,9 +88,9 @@ $endif$
 
 $if(education)$
 \subsection*{Education}
-\begin{tabularx}{\textwidth}{lXr}
+\begin{tabularx}{\textwidth}{lXXXr}
 $for(education)$
-  $it.school$, $it.location$ & $it.major$ & $it.degree$, $it.year$ \\
+  $it.school$ & $it.location$ & $it.degree$ & $it.major$ & $it.year$ \\
 $endfor$
 \end{tabularx}
 $endif$

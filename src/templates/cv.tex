@@ -99,11 +99,11 @@ $if(employment)$
 \subsection*{Employment History}
 $-- This command needs to generate, by default, two newlines due to the \multirow{2}.
 $-- Additional newlines after 2 will be generated at the end of the for loop.
-\newcommand\entry[4]{\multirow{2}{*}{\shortstack[l]{#1\\\emph{#2}}} & #3 & {\yyyymmdate #4}\\\\}
-\begin{tabularx}{\textwidth}{lXr}
+\newcommand\entry[4]{#1 & #2 & \emph{#3} & {\yyyymmdate #4}\\\\}
+\begin{tabularx}{\textwidth}{llXr}
 $for(employment)$
-  \entry{$it.company$}{$it.title$}{$it.location$ $if(it.remote)$ (remote)$endif$}{\multirow{$it.dates/length$}{*}{\shortstack{$for(it.dates)$\formatdate{$it.start.day$}{$it.start.month$}{$it.start.year$}--$if(it.end)$\formatdate{$it.end.day$}{$it.end.month$}{$it.end.year$}$else$present$endif$ $sep$\\$endfor$}}}
-$for(it.dates/rest/rest)$\\$endfor$
+  \entry{$it.company$}{$it.location$ $if(it.remote)$(remote)$endif$}{\multirow{$it.roles/length$}{*}{\shortstack[l]{$for(it.roles)$ $if(it.title)$ $it.title$ $else$ \vphantom{foobar} $endif$ $sep$\\$endfor$}}}{\multirow{$it.roles/length$}{*}{\shortstack{$for(it.roles)$\formatdate{$it.dates.start.day$}{$it.dates.start.month$}{$it.dates.start.year$}--$if(it.dates.end)$\formatdate{$it.dates.end.day$}{$it.dates.end.month$}{$it.dates.end.year$}$else$present$endif$ $sep$\\$endfor$}}}
+$for(it.roles/rest/rest)$\\$endfor$
 $endfor$
 \end{tabularx}
 $endif$

@@ -9,3 +9,11 @@ populated.
 
 To build the resume, install `pandoc` and a LaTeX distribution.  Then run
 `make`.
+
+This repository uses a non-standard versioning scheme suitable for tracking
+employment.  The version consists of a triple of "major", "minor", and "patch"
+versions.  The "major" version is incremented after a change in companies.  The
+"minor" version is incremented after a change in roles within a company.  The
+"patch" version is incremented whenever the resume is changed.  (I started this
+versioning scheme after joining SiFive, hence why the versions do not line up
+to my number of employers.)

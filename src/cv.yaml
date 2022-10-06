@@ -23,9 +23,13 @@ employment:
     location: San Mateo, CA
     remote: true
     roles:
+      - title: Principal Engineer
+        dates:
+          start: {year: 2022, month: 9, day: 15}
       - title: Senior Staff Engineer
         dates:
           start: {year: 2020, month: 9, day: 14}
+          end: {year: 2022, month: 9, day: 15}
   - company: IBM
     location: Yorktown Heights, NY
     roles:

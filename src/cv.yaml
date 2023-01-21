@@ -138,9 +138,9 @@ maintainer:
       - MLIR
     description: CIRCT IR Compilers and Tools \cite{none:conf/FCCM/Eldridge/2022, none:conf/CCCC/Eldridge/2021, none:conf/WOSET/Eldridge/2021}
     statistics:
-      commits: 495
-      additions: 39339
-      deletions: 18212
+      commits: 597
+      additions: 48363
+      deletions: 27778
   - organization: chipsalliance
     repository: firrtl
     host: https://github.com
@@ -158,9 +158,9 @@ maintainer:
       - Scala
     description: Scala-embedded hardware DSL \cite{none:conf/FCCM/Eldridge/2022, none:workshop/CCC/eldridge/2020/becoming-a-chisel-developer, none:workshop/CCC/eldridge-2018-libraries-intensive, eldridge:2018:modsim}
     statistics:
-      commits: 195
-      additions: 15263
-      deletions: 6231
+      commits: 205
+      additions: 15763
+      deletions: 6543
   - organization: chipsalliance
     repository: firrtl-spec
     host: https://github.com
@@ -168,9 +168,9 @@ maintainer:
       - Markdown
     description: Specification for the FIRRTL language
     statistics:
-      commits: 47
-      additions: 5327
-      deletions: 3967
+      commits: 57
+      additions: 5507
+      deletions: 4481
 contributor:
   - organization: chipsalliance
     repository: rocket-chip
@@ -259,14 +259,21 @@ author:
     languages:
       - Verilog
     description: Repository for basic (and not so basic) Verilog blocks with high re-use potential
-    stars: 408
+    stars: 429
   - organization: bu-icsg
     repository: dana
     host: https://github.com
     languages:
       - Scala
     description: Dynamically Allocated Neural Network Accelerator for the \riscv Rocket Microprocessor in Chisel \cite{thesis:eldridge, DBLP:conf/IEEEpact/EldridgeWSAJ15, none:poster/RISCV/eldridge-2016, none:conf/BARC/Eldridge-2016, none:poster/DAC/eldridge-2016}
-    stars: 182
+    stars: 188
+  - organization: sifive
+    repository: chisel-circt
+    host: https://github.com
+    languages:
+      - Scala
+    description: Library to compile Chisel circuits using CIRCT \cite{none:conf/CCCC/Eldridge/2021}
+    stars: 59
   - organization: seldridge
     repository: rocket-rocc-examples
     host: https://github.com
@@ -280,14 +287,7 @@ author:
     languages:
       - Tcl
     description: Facilitates building open source tools for working with hardware description languages (HDLs)
-    stars: 53
-  - organization: sifive
-    repository: chisel-circt
-    host: https://github.com
-    languages:
-      - Scala
-    description: Library to compile Chisel circuits using CIRCT \cite{none:conf/CCCC/Eldridge/2021}
-    stars: 51
+    stars: 56
   - organization: IBM
     repository: rocc-software
     host: https://github.com
@@ -308,14 +308,14 @@ author:
     languages:
       - Scala
     description: Embedded Scalable Platform accelerator socket \cite{none:keynote/FOSDEM/eldridge/2020/esp-chisel-accelerators}
-    stars: 19
+    stars: 20
   - organization: IBM
     repository: firrtl-mode
     host: https://github.com
     languages:
       - Emacs Lisp
     description: Major mode for editing FIRRTL files in Emacs
-    stars: 3
+    stars: 4
   - organization: seldridge
     repository: make-markdown
     host: https://github.com

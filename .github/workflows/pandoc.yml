@@ -4,27 +4,19 @@ on: push
 
 jobs:
   markdown-to-pdf:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     permissions:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: "Setup"
-        run: mkdir build/
-      - name: "YAML, LaTeX -> [pandoc] -> LaTeX"
-        uses: docker://pandoc/core:latest
-        with:
-          args: >-
-            --from=markdown
-            --template=src/templates/cv.tex
-            --metadata-file=src/cv.yaml
-            /dev/null
-            -o build/cv.tex
-      - name: "LaTeX -> [latexmk] -> PDF"
-        uses: xu-cheng/texlive-action/full@v1
-        with:
-          run: env BIBINPUTS=src/bib latexmk -lualatex -pdf build/cv.tex -output-directory=build
+        run: |
+          sudo apt-get update
+          sudo apt-get install biber latexmk pandoc texlive-bibtex-extra texlive-latex-extra texlive-latex-recommended
+      - name: "YAML, LaTeX -> [pandoc] -> [TeXLive] -> PDF"
+        run: |
+          make
       - name: "Rename"
         run: mv build/cv.pdf build/schuyler-eldridge-cv.pdf
       - name: "Upload build directory"

@@ -130,6 +130,16 @@ service:
     role: Article Reviewer
     year: 2016
 maintainer:
+  - organization: chipsalliance
+    repository: chisel
+    host: https://github.com
+    languages:
+      - Scala
+    description: Scala-embedded hardware DSL \cite{none:conf/FCCM/Eldridge/2022, none:workshop/CCC/eldridge/2020/becoming-a-chisel-developer, none:workshop/CCC/eldridge-2018-libraries-intensive, eldridge:2018:modsim}
+    statistics:
+      commits: 655
+      additions: 48268
+      deletions: 102712
   - organization: llvm
     repository: circt
     host: https://github.com
@@ -138,29 +148,9 @@ maintainer:
       - MLIR
     description: CIRCT IR Compilers and Tools \cite{none:conf/FCCM/Eldridge/2022, none:conf/CCCC/Eldridge/2021, none:conf/WOSET/Eldridge/2021}
     statistics:
-      commits: 597
-      additions: 48363
-      deletions: 27778
-  - organization: chipsalliance
-    repository: firrtl
-    host: https://github.com
-    languages:
-      - Scala
-    description: Circuit Intermediate Representation and Compiler \cite{none:conference/CCC/eldridge/2020/verilog-generation, none:workshop/CCC/eldridge-2018-annotations}
-    statistics:
-      commits: 217
-      additions: 23754
-      deletions: 12210
-  - organization: chipsalliance
-    repository: chisel3
-    host: https://github.com
-    languages:
-      - Scala
-    description: Scala-embedded hardware DSL \cite{none:conf/FCCM/Eldridge/2022, none:workshop/CCC/eldridge/2020/becoming-a-chisel-developer, none:workshop/CCC/eldridge-2018-libraries-intensive, eldridge:2018:modsim}
-    statistics:
-      commits: 205
-      additions: 15763
-      deletions: 6543
+      commits: 633
+      additions: 49477
+      deletions: 28078
   - organization: chipsalliance
     repository: firrtl-spec
     host: https://github.com
@@ -168,9 +158,9 @@ maintainer:
       - Markdown
     description: Specification for the FIRRTL language
     statistics:
-      commits: 57
-      additions: 5507
-      deletions: 4481
+      commits: 74
+      additions: 5883
+      deletions: 4760
 contributor:
   - organization: chipsalliance
     repository: rocket-chip
@@ -202,6 +192,16 @@ contributor:
       commits: 3
       additions: 3
       deletions: 3
+  - organization: llvm
+    repository: llvm-project
+    host: https://github.com
+    languages:
+      - \CC
+    description: LLVM compiler infrastructure project
+    statistics:
+      commits: 2
+      additions: 29
+      deletions: 4
   # - organization: freechipsproject
   #   repository: chisel-testers
   #   host: https://github.com
@@ -259,28 +259,21 @@ author:
     languages:
       - Verilog
     description: Repository for basic (and not so basic) Verilog blocks with high re-use potential
-    stars: 429
+    stars: 446
   - organization: bu-icsg
     repository: dana
     host: https://github.com
     languages:
       - Scala
     description: Dynamically Allocated Neural Network Accelerator for the \riscv Rocket Microprocessor in Chisel \cite{thesis:eldridge, DBLP:conf/IEEEpact/EldridgeWSAJ15, none:poster/RISCV/eldridge-2016, none:conf/BARC/Eldridge-2016, none:poster/DAC/eldridge-2016}
-    stars: 188
-  - organization: sifive
-    repository: chisel-circt
-    host: https://github.com
-    languages:
-      - Scala
-    description: Library to compile Chisel circuits using CIRCT \cite{none:conf/CCCC/Eldridge/2021}
-    stars: 59
+    stars: 189
   - organization: seldridge
     repository: rocket-rocc-examples
     host: https://github.com
     languages:
       - C
     description: Tests for example Rocket Custom Coprocessors
-    stars: 58
+    stars: 59
   - organization: IBM
     repository: hdl-tools
     host: https://github.com
@@ -294,7 +287,7 @@ author:
     languages:
       - C
     description: C/Assembly macros for talking with Rocket Custom Coprocessors (RoCCs)
-    stars: 48
+    stars: 50
   - organization: IBM
     repository: chiffre
     host: https://github.com

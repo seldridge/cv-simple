@@ -9,7 +9,7 @@ ENV = env \
 	BIBINPUTS="$(BIBINPUTS):$(base_dir)/src/bib"
 
 $(base_dir)/build/%.pdf: $(base_dir)/src/%.yaml $(base_dir)/src/templates/cv.tex $(base_dir)/src/bib/schuyler.bib | $(base_dir)/build
-	$(ENV) pandoc --from=markdown --pdf-engine=latexmk --pdf-engine-opt=-lualatex --pdf-engine-opt=-output-directory=$(dir $@) --template=$(base_dir)/src/templates/cv.tex --metadata-file=$< /dev/null -o $@
+	$(ENV) pandoc --from=markdown --pdf-engine=latexmk --pdf-engine-opt=-lualatex --pdf-engine-opt=-bibtex --pdf-engine-opt=-output-directory=$(dir $@) --template=$(base_dir)/src/templates/cv.tex --metadata-file=$< /dev/null -o $@
 
 $(base_dir)/build:
 	mkdir $@

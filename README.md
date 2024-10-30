@@ -17,3 +17,9 @@ versions.  The "major" version is incremented after a change in companies.  The
 "patch" version is incremented whenever the resume is changed.  (I started this
 versioning scheme after joining SiFive, hence why the versions do not line up
 to my number of employers.)
+
+#### Dependencies
+
+``` shell
+port install biblatex-biber latexmk pandoc texlive texlive-bibtex-extra texlive-latex-extra texlive-luatex
+```

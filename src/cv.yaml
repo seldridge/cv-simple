@@ -111,6 +111,9 @@ grants:
       start: {day: 27, month: 08, year: 2016}
       end:   {day: 31, month: 09, year: 2018}
 service:
+  - name: Workshop on Languages, Tools, and Techniques for Accelerator Design (LATTE)
+    role: Technical Program Committee
+    year: 2024
   - name: IEEE Transactions on Computers
     role: Article Reviewer
     year: 2022
@@ -130,16 +133,6 @@ service:
     role: Article Reviewer
     year: 2016
 maintainer:
-  - organization: chipsalliance
-    repository: chisel
-    host: https://github.com
-    languages:
-      - Scala
-    description: Scala-embedded hardware DSL \cite{none:conf/FCCM/Eldridge/2022, none:workshop/CCC/eldridge/2020/becoming-a-chisel-developer, none:workshop/CCC/eldridge-2018-libraries-intensive, eldridge:2018:modsim}
-    statistics:
-      commits: 655
-      additions: 48268
-      deletions: 102712
   - organization: llvm
     repository: circt
     host: https://github.com
@@ -148,9 +141,19 @@ maintainer:
       - MLIR
     description: CIRCT IR Compilers and Tools \cite{none:conf/FCCM/Eldridge/2022, none:conf/CCCC/Eldridge/2021, none:conf/WOSET/Eldridge/2021}
     statistics:
-      commits: 633
-      additions: 49477
-      deletions: 28078
+      commits: 921
+      additions: 66939
+      deletions: 37481
+  - organization: chipsalliance
+    repository: chisel
+    host: https://github.com
+    languages:
+      - Scala
+    description: Scala-embedded hardware DSL \cite{none:conf/FCCM/Eldridge/2022, none:workshop/CCC/eldridge/2020/becoming-a-chisel-developer, none:workshop/CCC/eldridge-2018-libraries-intensive, eldridge:2018:modsim}
+    statistics:
+      commits: 787
+      additions: 57395
+      deletions: 107999
   - organization: chipsalliance
     repository: firrtl-spec
     host: https://github.com
@@ -158,9 +161,9 @@ maintainer:
       - Markdown
     description: Specification for the FIRRTL language
     statistics:
-      commits: 74
-      additions: 5883
-      deletions: 4760
+      commits: 180
+      additions: 10702
+      deletions: 7230
 contributor:
   - organization: chipsalliance
     repository: rocket-chip
@@ -199,9 +202,9 @@ contributor:
       - \CC
     description: LLVM compiler infrastructure project
     statistics:
-      commits: 2
-      additions: 29
-      deletions: 4
+      commits: 3
+      additions: 30
+      deletions: 5
   # - organization: freechipsproject
   #   repository: chisel-testers
   #   host: https://github.com
@@ -259,56 +262,56 @@ author:
     languages:
       - Verilog
     description: Repository for basic (and not so basic) Verilog blocks with high re-use potential
-    stars: 446
+    stars: 549
   - organization: bu-icsg
     repository: dana
     host: https://github.com
     languages:
       - Scala
     description: Dynamically Allocated Neural Network Accelerator for the \riscv Rocket Microprocessor in Chisel \cite{thesis:eldridge, DBLP:conf/IEEEpact/EldridgeWSAJ15, none:poster/RISCV/eldridge-2016, none:conf/BARC/Eldridge-2016, none:poster/DAC/eldridge-2016}
-    stars: 189
+    stars: 208
   - organization: seldridge
     repository: rocket-rocc-examples
     host: https://github.com
     languages:
       - C
     description: Tests for example Rocket Custom Coprocessors
-    stars: 59
+    stars: 69
   - organization: IBM
     repository: hdl-tools
     host: https://github.com
     languages:
       - Tcl
     description: Facilitates building open source tools for working with hardware description languages (HDLs)
-    stars: 56
+    stars: 62
   - organization: IBM
     repository: rocc-software
     host: https://github.com
     languages:
       - C
     description: C/Assembly macros for talking with Rocket Custom Coprocessors (RoCCs)
-    stars: 50
+    stars: 52
   - organization: IBM
     repository: chiffre
     host: https://github.com
     languages:
       - Scala
     description: A fault-injection framework using Chisel and FIRRTL \cite{eldridge:2018:carrv, none:demo/CogArch/Roelke-2018, eldridge:2018:gomactech:velour}
-    stars: 25
+    stars: 33
   - organization: IBM
     repository: esp-chisel-accelerators
     host: https://github.com
     languages:
       - Scala
     description: Embedded Scalable Platform accelerator socket \cite{none:keynote/FOSDEM/eldridge/2020/esp-chisel-accelerators}
-    stars: 20
+    stars: 23
   - organization: IBM
     repository: firrtl-mode
     host: https://github.com
     languages:
       - Emacs Lisp
     description: Major mode for editing FIRRTL files in Emacs
-    stars: 4
+    stars: 7
   - organization: seldridge
     repository: make-markdown
     host: https://github.com

@@ -85,6 +85,10 @@ awards:
       end:   {day: 01, month: 08, year: 2016}
   - name: CELEST/CompNet Award
     date: {day: 23, month: 04, year: 2012}
+  - name: NSF Graduate Research Fellowship Program 2012 Honorable Mention
+    date: {day: 30, month: 03, year: 2012}
+  - name: NSF Graduate Research Fellowship Program 2011 Honorable Mention
+    date: {day: 05, month: 04, year: 2011}
   - name: Boston University Dean's Fellowship
     date:
       start: {day: 08, month: 09, year: 2010}

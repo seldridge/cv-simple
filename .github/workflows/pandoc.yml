@@ -20,7 +20,7 @@ jobs:
       - name: "Rename"
         run: mv build/cv.pdf build/schuyler-eldridge-cv.pdf
       - name: "Upload build directory"
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: build

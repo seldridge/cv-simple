@@ -29,7 +29,7 @@ jobs:
           echo "${{ env.pandoc-install-dir }}/bin" >> $GITHUB_PATH
       - name: "YAML, LaTeX -> [pandoc] -> [TeXLive] -> PDF"
         run: |
-          make
+          make $(pwd)/build/cv.pdf
       - name: "Rename"
         run: mv build/cv.pdf build/schuyler-eldridge-cv.pdf
       - name: "Upload build directory"

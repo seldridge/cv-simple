@@ -2,6 +2,11 @@ name:
 
 on: push
 
+env:
+  pandoc-version: 3.9.0.2
+  pandoc-crossref-version: v0.3.24a
+  pandoc-install-dir: /opt/pandoc
+
 jobs:
   markdown-to-pdf:
     runs-on: ubuntu-22.04
@@ -13,7 +18,14 @@ jobs:
       - name: "Setup"
         run: |
           sudo apt-get update
-          sudo apt-get install biber latexmk pandoc texlive-bibtex-extra texlive-latex-extra texlive-latex-recommended
+          sudo apt-get install biber latexmk texlive-bibtex-extra texlive-latex-extra texlive-latex-recommended
+      - name: "Install pandoc ${{ env.pandoc-version }}, pandoc-crossref ${{ env.pandoc-crossref-version }}"
+        shell: bash
+        run: |
+          mkdir -p ${{ env.pandoc-install-dir }}/bin
+          wget https://github.com/jgm/pandoc/releases/download/${{ env.pandoc-version }}/pandoc-${{ env.pandoc-version }}-linux-amd64.tar.gz -O - | tar -zx -C ${{ env.pandoc-install-dir }}/bin --strip-components 2
+          wget https://github.com/lierdakil/pandoc-crossref/releases/download/${{ env.pandoc-crossref-version }}/pandoc-crossref-Linux-X64.tar.xz -O - | tar -Jx -C ${{ env.pandoc-install-dir }}/bin
+          echo "${{ env.pandoc-install-dir }}/bin" >> $GITHUB_PATH
       - name: "YAML, LaTeX -> [pandoc] -> [TeXLive] -> PDF"
         run: |
           make

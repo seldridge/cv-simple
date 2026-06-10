@@ -6,6 +6,8 @@ env:
   pandoc-version: 3.9.0.2
   pandoc-crossref-version: v0.3.24a
   pandoc-install-dir: /opt/pandoc
+  typst-version: v0.14.2
+  typst-install-dir: /opt/typst
 
 jobs:
   markdown-to-pdf:
@@ -19,7 +21,7 @@ jobs:
       - name: "Setup"
         run: |
           sudo apt-get update
-          sudo apt-get install biber latexmk texlive-bibtex-extra texlive-latex-extra texlive-latex-recommended
+          sudo apt-get install biber fonts-ibm-plex latexmk texlive-bibtex-extra texlive-latex-extra texlive-latex-recommended
       - name: "Install pandoc ${{ env.pandoc-version }}, pandoc-crossref ${{ env.pandoc-crossref-version }}"
         shell: bash
         run: |
@@ -27,9 +29,18 @@ jobs:
           wget https://github.com/jgm/pandoc/releases/download/${{ env.pandoc-version }}/pandoc-${{ env.pandoc-version }}-linux-amd64.tar.gz -O - | tar -zx -C ${{ env.pandoc-install-dir }}/bin --strip-components 2
           wget https://github.com/lierdakil/pandoc-crossref/releases/download/${{ env.pandoc-crossref-version }}/pandoc-crossref-Linux-X64.tar.xz -O - | tar -Jx -C ${{ env.pandoc-install-dir }}/bin
           echo "${{ env.pandoc-install-dir }}/bin" >> $GITHUB_PATH
+      - name: "Install Typst ${{ env.typst-version }}"
+        shell: bash
+        run: |
+          mkdir -p ${{ env.typst-install-dir }}/bin
+          wget -qO- https://github.com/typst/typst/releases/download/${{ env.typst-version }}/typst-x86_64-unknown-linux-musl.tar.xz | tar -xJ --strip-components 1 -C ${{ env.typst-install-dir }}/bin
+          echo "${{ env.typst-install-dir }}/bin" >> $GITHUB_PATH
       - name: "YAML, LaTeX -> [pandoc] -> [TeXLive] -> PDF"
         run: |
-          make
+          make $(pwd)/build/cv.pdf
+      - name: "YAML -> [Typst] -> PDF"
+        run: |
+          make $(pwd)/build/cv.typ.pdf
       - name: "Rename"
         run: mv build/cv.pdf build/schuyler-eldridge-cv.pdf
       - name: "Upload build directory"

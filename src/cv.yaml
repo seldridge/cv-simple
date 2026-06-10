@@ -113,7 +113,7 @@ grants:
     role: Staff
     date:
       start: {day: 27, month: 08, year: 2016}
-      end:   {day: 31, month: 09, year: 2018}
+      end:   {day: 30, month: 09, year: 2018}
 service:
   - name: Workshop on Languages, Tools, and Techniques for Accelerator Design (LATTE)
     role: Technical Program Committee
@@ -143,7 +143,9 @@ maintainer:
     languages:
       - \CC
       - MLIR
-    description: CIRCT IR Compilers and Tools \cite{none:conf/FCCM/Eldridge/2022, none:conf/CCCC/Eldridge/2021, none:conf/WOSET/Eldridge/2021}
+    description: CIRCT IR Compilers and Tools
+    citations:
+      - none:conf/FCCM/Eldridge/2022
     statistics:
       commits: 921
       additions: 66939
@@ -153,7 +155,12 @@ maintainer:
     host: https://github.com
     languages:
       - Scala
-    description: Scala-embedded hardware DSL \cite{none:conf/FCCM/Eldridge/2022, none:workshop/CCC/eldridge/2020/becoming-a-chisel-developer, none:workshop/CCC/eldridge-2018-libraries-intensive, eldridge:2018:modsim}
+    description: Scala-embedded hardware DSL
+    citations:
+      - none:conf/FCCM/Eldridge/2022
+      - none:workshop/CCC/eldridge/2020/becoming-a-chisel-developer
+      - none:workshop/CCC/eldridge-2018-libraries-intensive
+      - eldridge:2018:modsim
     statistics:
       commits: 787
       additions: 57395
@@ -184,7 +191,7 @@ contributor:
     host: https://github.com
     languages:
       - C
-    description: \riscv Frontend Server
+    description: RISC-V Frontend Server
     statistics:
       commits: 9
       additions: 298
@@ -194,7 +201,7 @@ contributor:
     host: https://github.com
     languages:
       - Shell
-    description: \riscv Tools (GNU Toolchain, ISA Simulator, Tests)
+    description: RISC-V Tools (GNU Toolchain, ISA Simulator, Tests)
     statistics:
       commits: 3
       additions: 3
@@ -272,7 +279,13 @@ author:
     host: https://github.com
     languages:
       - Scala
-    description: Dynamically Allocated Neural Network Accelerator for the \riscv Rocket Microprocessor in Chisel \cite{thesis:eldridge, DBLP:conf/IEEEpact/EldridgeWSAJ15, none:poster/RISCV/eldridge-2016, none:conf/BARC/Eldridge-2016, none:poster/DAC/eldridge-2016}
+    description: Dynamically Allocated Neural Network Accelerator for the RISC-V Rocket Microprocessor in Chisel
+    citations:
+      - thesis:eldridge
+      - DBLP:conf/IEEEpact/EldridgeWSAJ15
+      - none:poster/RISCV/eldridge-2016
+      - none:conf/BARC/Eldridge-2016
+      - none:poster/DAC/eldridge-2016
     stars: 208
   - organization: seldridge
     repository: rocket-rocc-examples
@@ -300,14 +313,20 @@ author:
     host: https://github.com
     languages:
       - Scala
-    description: A fault-injection framework using Chisel and FIRRTL \cite{eldridge:2018:carrv, none:demo/CogArch/Roelke-2018, eldridge:2018:gomactech:velour}
+    description: A fault-injection framework using Chisel and FIRRTL
+    citations:
+      - eldridge:2018:carrv
+      - none:demo/CogArch/Roelke-2018
+      - eldridge:2018:gomactech:velour
     stars: 33
   - organization: IBM
     repository: esp-chisel-accelerators
     host: https://github.com
     languages:
       - Scala
-    description: Embedded Scalable Platform accelerator socket \cite{none:keynote/FOSDEM/eldridge/2020/esp-chisel-accelerators}
+    description: Embedded Scalable Platform accelerator socket
+    citations:
+      - none:keynote/FOSDEM/eldridge/2020/esp-chisel-accelerators
     stars: 23
   - organization: IBM
     repository: firrtl-mode
@@ -327,7 +346,8 @@ author:
     host: https://github.com
     languages:
       - \LaTeX
-    description: Simple \LaTeX \xspace CV (this document)
+      - Typst
+    description: YAML-to-PDF CV (this document)
 panels:
   - role: Panelist
     name: Building Efficient and Resilient AI Systems
@@ -335,8 +355,8 @@ panels:
     date: {day: 24, month: 03, year: 2018}
     location: Williamsburg, VA
   - role: Panelist
-    name: Open Discussion -- Current State of \riscv Research
-    event: 1st Workshop on Computer Architecture Research with \riscv (CARRV)
+    name: Open Discussion -- Current State of RISC-V Research
+    event: 1st Workshop on Computer Architecture Research with RISC-V (CARRV)
     date: {day: 14, month: 10, year: 2017}
     location: Boston, MA
 thesis-committees:

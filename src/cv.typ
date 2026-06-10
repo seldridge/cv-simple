@@ -39,20 +39,25 @@
             stroke: 0.5pt
         )
     },
-    footer: {
-        line(
-            length: 100%,
-            stroke: 0.5pt
-        )
-        v(-1.25em)
-        table(
-            columns: (1fr, 1fr, 1fr),
-            align: (left, center, right),
-            stroke: none,
-            [#smallcaps[#link("https://github.com/seldridge")[seldridge\@github]]],
-            [#smallcaps[New York, NY]],
-            [#smallcaps[#link("mailto:schuyler.eldridge@gmail.com")[schuyler.eldridge\@gmail.com]]]
-        )
+    footer: context {
+        let pageNumber = counter(page).get().first()
+        if pageNumber == 1 {
+            line(
+                length: 100%,
+                stroke: 0.5pt
+            )
+            v(-1.25em)
+            table(
+                columns: (1fr, 1fr, 1fr),
+                align: (left, center, right),
+                stroke: none,
+                [#smallcaps[#link("https://github.com/seldridge")[seldridge\@github]]],
+                [#smallcaps[New York, NY]],
+                [#smallcaps[#link("mailto:schuyler.eldridge@gmail.com")[schuyler.eldridge\@gmail.com]]]
+            )
+        } else {
+            align(center)[#pageNumber]
+        }
     }
 )
 

@@ -42,7 +42,7 @@ jobs:
         run: |
           make $(pwd)/build/cv.typ.pdf
       - name: "Rename"
-        run: mv build/cv.pdf build/schuyler-eldridge-cv.pdf
+        run: mv build/cv.typ.pdf build/schuyler-eldridge-cv.pdf
       - name: "Upload build directory"
         # v7.0.1
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a

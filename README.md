@@ -5,7 +5,7 @@ All data associated with the resume resides in a `src/cv.yaml` file.
 This YAML then feeds two different PDF generating flows:
 
 1. a [`pandoc`](https://pandoc.org/) and LaTeX template
-2. and [Typst](https://typst.app/) program.
+2. and a [Typst](https://typst.app/) program.
 
 All bibliographic information is maintained in a `*.bib` file with keywords used
 to indicate where each entry should be automatically populated.

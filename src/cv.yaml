@@ -147,9 +147,9 @@ maintainer:
     citations:
       - none:conf/FCCM/Eldridge/2022
     statistics:
-      commits: 921
-      additions: 66939
-      deletions: 37481
+      commits: 1402
+      additions: 91269
+      deletions: 47291
   - organization: chipsalliance
     repository: chisel
     host: https://github.com
@@ -162,9 +162,9 @@ maintainer:
       - none:workshop/CCC/eldridge-2018-libraries-intensive
       - eldridge:2018:modsim
     statistics:
-      commits: 787
-      additions: 57395
-      deletions: 107999
+      commits: 1157
+      additions: 78790
+      deletions: 120272
   - organization: chipsalliance
     repository: firrtl-spec
     host: https://github.com
@@ -172,9 +172,9 @@ maintainer:
       - Markdown
     description: Specification for the FIRRTL language
     statistics:
-      commits: 180
-      additions: 10702
-      deletions: 7230
+      commits: 211
+      additions: 12502
+      deletions: 7632
 contributor:
   - organization: chipsalliance
     repository: rocket-chip
@@ -273,7 +273,7 @@ author:
     languages:
       - Verilog
     description: Repository for basic (and not so basic) Verilog blocks with high re-use potential
-    stars: 549
+    stars: 623
   - organization: bu-icsg
     repository: dana
     host: https://github.com
@@ -286,7 +286,7 @@ author:
       - none:poster/RISCV/eldridge-2016
       - none:conf/BARC/Eldridge-2016
       - none:poster/DAC/eldridge-2016
-    stars: 208
+    stars: 223
   - organization: seldridge
     repository: rocket-rocc-examples
     host: https://github.com
@@ -300,14 +300,14 @@ author:
     languages:
       - Tcl
     description: Facilitates building open source tools for working with hardware description languages (HDLs)
-    stars: 62
+    stars: 68
   - organization: IBM
     repository: rocc-software
     host: https://github.com
     languages:
       - C
     description: C/Assembly macros for talking with Rocket Custom Coprocessors (RoCCs)
-    stars: 52
+    stars: 53
   - organization: IBM
     repository: chiffre
     host: https://github.com
@@ -318,7 +318,7 @@ author:
       - eldridge:2018:carrv
       - none:demo/CogArch/Roelke-2018
       - eldridge:2018:gomactech:velour
-    stars: 33
+    stars: 38
   - organization: IBM
     repository: esp-chisel-accelerators
     host: https://github.com
@@ -327,14 +327,14 @@ author:
     description: Embedded Scalable Platform accelerator socket
     citations:
       - none:keynote/FOSDEM/eldridge/2020/esp-chisel-accelerators
-    stars: 23
+    stars: 25
   - organization: IBM
     repository: firrtl-mode
     host: https://github.com
     languages:
       - Emacs Lisp
     description: Major mode for editing FIRRTL files in Emacs
-    stars: 7
+    stars: 8
   - organization: seldridge
     repository: make-markdown
     host: https://github.com

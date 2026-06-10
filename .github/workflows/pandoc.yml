@@ -21,7 +21,7 @@ jobs:
       - name: "Setup"
         run: |
           sudo apt-get update
-          sudo apt-get install biber latexmk texlive-bibtex-extra texlive-latex-extra texlive-latex-recommended
+          sudo apt-get install biber fonts-ibm-plex latexmk texlive-bibtex-extra texlive-latex-extra texlive-latex-recommended
       - name: "Install pandoc ${{ env.pandoc-version }}, pandoc-crossref ${{ env.pandoc-crossref-version }}"
         shell: bash
         run: |

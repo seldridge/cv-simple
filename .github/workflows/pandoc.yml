@@ -15,13 +15,6 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: "Install Typst ${{ env.typst-version }}"
-        shell: bash
-        run: |
-          mkdir -p ${{ env.typst-install-dir }}/bin
-          wget -qO- https://github.com/typst/typst/releases/download/${{ env.typst-version }}/typst-x86_64-unknown-linux-musl.tar.xz | tar -xJ --strip-components 1 -C ${{ env.typst-install-dir }}/bin
-          tree "${{ env.typst-install-dir }}"
-          echo "${{ env.typst-install-dir }}/bin" >> $GITHUB_PATH
       - name: Checkout
         # v6.0.3
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
@@ -36,6 +29,12 @@ jobs:
           wget https://github.com/jgm/pandoc/releases/download/${{ env.pandoc-version }}/pandoc-${{ env.pandoc-version }}-linux-amd64.tar.gz -O - | tar -zx -C ${{ env.pandoc-install-dir }}/bin --strip-components 2
           wget https://github.com/lierdakil/pandoc-crossref/releases/download/${{ env.pandoc-crossref-version }}/pandoc-crossref-Linux-X64.tar.xz -O - | tar -Jx -C ${{ env.pandoc-install-dir }}/bin
           echo "${{ env.pandoc-install-dir }}/bin" >> $GITHUB_PATH
+      - name: "Install Typst ${{ env.typst-version }}"
+        shell: bash
+        run: |
+          mkdir -p ${{ env.typst-install-dir }}/bin
+          wget -qO- https://github.com/typst/typst/releases/download/${{ env.typst-version }}/typst-x86_64-unknown-linux-musl.tar.xz | tar -xJ --strip-components 1 -C ${{ env.typst-install-dir }}/bin
+          echo "${{ env.typst-install-dir }}/bin" >> $GITHUB_PATH
       - name: "YAML, LaTeX -> [pandoc] -> [TeXLive] -> PDF"
         run: |
           make $(pwd)/build/cv.pdf

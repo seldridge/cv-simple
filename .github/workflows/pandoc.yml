@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p ${{ env.typst-install-dir }}/bin
-          wget -qO- https://github.com/typst/typst/releases/download/${{ env.typst-version }}/typst-x86_64-unknown-linux-musl.tar.xz | tar -xJ -strip-components 1 -C ${{ env.typst-install-dir }}/bin
+          wget -qO- https://github.com/typst/typst/releases/download/${{ env.typst-version }}/typst-x86_64-unknown-linux-musl.tar.xz | tar -xJ --strip-components 1 -C ${{ env.typst-install-dir }}/bin
           tree "${{ env.typst-install-dir }}"
           echo "${{ env.typst-install-dir }}/bin" >> $GITHUB_PATH
       - name: Checkout

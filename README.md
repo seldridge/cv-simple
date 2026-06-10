@@ -2,13 +2,16 @@ Towards a simplistic CV, based on the format of @jappavoo's
 [CV](http://www.cs.bu.edu/~jappavoo/Resources/Docs/cv.pdf).
 
 All data associated with the resume resides in a `src/cv.yaml` file.
-[`pandoc`](https://pandoc.org/) is then used to populate a LaTeX template with
-this information.  All bibliographic information is maintained in a `*.bib` file
-with keywords used to indicate where each entry should be automatically
-populated.
+This YAML then feeds two different PDF generating flows:
 
-To build the resume, install `pandoc` and a LaTeX distribution.  Then run
-`make`.
+1. a [`pandoc`](https://pandoc.org/) and LaTeX template
+2. and [Typst](https://typst.app/) program.
+
+All bibliographic information is maintained in a `*.bib` file with keywords used
+to indicate where each entry should be automatically populated.
+
+To build the resume, install `pandoc`, a LaTeX distribution, and Typst.  Then
+run `make`.
 
 This repository uses a non-standard versioning scheme suitable for tracking
 employment.  The version consists of a triple of "major", "minor", and "patch"
@@ -21,5 +24,5 @@ to my number of employers.)
 #### Dependencies
 
 ``` shell
-port install biblatex-biber latexmk pandoc texlive texlive-bibtex-extra texlive-latex-extra texlive-luatex
+port install biblatex-biber latexmk pandoc texlive texlive-bibtex-extra texlive-latex-extra texlive-luatex typst
 ```

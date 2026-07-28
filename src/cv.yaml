@@ -20,7 +20,7 @@ education:
     year: 2010
 employment:
   - company: SiFive
-    location: San Mateo, CA
+    location: Santa Clara, CA
     remote: true
     roles:
       - title: Principal Engineer

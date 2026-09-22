@@ -156,9 +156,9 @@ maintainer:
     citations:
       - none:conf/FCCM/Eldridge/2022
     statistics:
-      commits: 1402
-      additions: 91269
-      deletions: 47291
+      commits: 1428
+      additions: 93339
+      deletions: 48337
   - organization: chipsalliance
     repository: chisel
     host: https://github.com
@@ -171,9 +171,9 @@ maintainer:
       - none:workshop/CCC/eldridge-2018-libraries-intensive
       - eldridge:2018:modsim
     statistics:
-      commits: 1157
-      additions: 78790
-      deletions: 120272
+      commits: 1163
+      additions: 79156
+      deletions: 120354
   - organization: chipsalliance
     repository: firrtl-spec
     host: https://github.com
@@ -181,9 +181,9 @@ maintainer:
       - Markdown
     description: Specification for the FIRRTL language
     statistics:
-      commits: 211
-      additions: 12502
-      deletions: 7632
+      commits: 218
+      additions: 12845
+      deletions: 7721
 contributor:
   - organization: chipsalliance
     repository: rocket-chip
@@ -282,7 +282,7 @@ author:
     languages:
       - Verilog
     description: Repository for basic (and not so basic) Verilog blocks with high re-use potential
-    stars: 623
+    stars: 630
   - organization: bu-icsg
     repository: dana
     host: https://github.com
@@ -295,21 +295,21 @@ author:
       - none:poster/RISCV/eldridge-2016
       - none:conf/BARC/Eldridge-2016
       - none:poster/DAC/eldridge-2016
-    stars: 223
+    stars: 224
   - organization: seldridge
     repository: rocket-rocc-examples
     host: https://github.com
     languages:
       - C
     description: Tests for example Rocket Custom Coprocessors
-    stars: 69
+    stars: 75
   - organization: IBM
     repository: hdl-tools
     host: https://github.com
     languages:
       - Tcl
     description: Facilitates building open source tools for working with hardware description languages (HDLs)
-    stars: 68
+    stars: 69
   - organization: IBM
     repository: rocc-software
     host: https://github.com
@@ -327,7 +327,7 @@ author:
       - eldridge:2018:carrv
       - none:demo/CogArch/Roelke-2018
       - eldridge:2018:gomactech:velour
-    stars: 38
+    stars: 39
   - organization: IBM
     repository: esp-chisel-accelerators
     host: https://github.com

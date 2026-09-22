@@ -90,7 +90,7 @@ $if(education)$
 \subsection*{Education}
 \begin{tabularx}{\textwidth}{lXXXr}
 $for(education)$
-  $it.school$ & $it.location$ & $it.degree$ & $it.major$ & $it.year$ \\
+  $it.school$ & $it.location$ & {\multirow{$it.degrees/length$}{*}{\shortstack[l]{$for(it.degrees)$ $if(it.degree)$ $it.degree$ $else$ \vphantom{foobar} $endif$ $sep$\\$endfor$}}} & {\multirow{$it.degrees/length$}{*}{\shortstack[l]{$for(it.degrees)$ $if(it.major)$ $it.major$ $else$ \vphantom{foobar} $endif$ $sep$\\$endfor$}}} & {\multirow{$it.degrees/length$}{*}{\shortstack[l]{$for(it.degrees)$ $if(it.year)$ $it.year$ $else$ \vphantom{foobar} $endif$ $sep$\\$endfor$}}} \\
 $endfor$
 \end{tabularx}
 $endif$

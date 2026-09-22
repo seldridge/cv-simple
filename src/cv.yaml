@@ -10,14 +10,13 @@ advisor:
 education:
   - school: Boston University
     location: Boston, MA
-    major: Computer Engineering
-    degree: Ph. D.
-    year: 2016
-  - school: Boston University
-    location: Boston, MA
-    major: Electrical Engineering
-    degree: B. S.
-    year: 2010
+    degrees:
+      - degree: Ph. D.
+        major: Computer Engineering
+        year: 2016
+      - degree: B. S.
+        major: Electrical Engineering
+        year: 2010
 employment:
   - company: SiFive
     location: Santa Clara, CA
@@ -30,6 +29,8 @@ employment:
         dates:
           start: {year: 2020, month: 9, day: 14}
           end: {year: 2022, month: 9, day: 15}
+    summary: |
+      I joined SiFive on a team assembled around the fledgling LLVM CIRCT project.  I technically co-led the migration of SiFive's Verilog compiler for the Chisel hardware description language from a Scala-based one to a C++/MLIR-based one hosted in the CIRCT project providing 10x performance and memory improvements on all SiFive designs.  Since then, I've led a 3-person team that has extended Chisel and CIRCT with support for design verification (DV) and physical design (PD) concerns: Probes (whitebox access to internal signals), Layers, (optional, isolated code enabled via macros or SystemVerilog's bind instantiation), Automatic Testing (colocated tests inside designs that automatically execute for a given parameterization), and Domains (type annotations that encode design/PD intent, e.g., clock domain information, enabling inference of missing domain information, checking illegal domain crossings, and generation of PD collateral files for legal designs).
   - company: IBM
     location: Yorktown Heights, NY
     roles:
@@ -41,6 +42,8 @@ employment:
         dates:
           start: {day: 27, month: 08, year: 2016}
           end:   {day: 02, month: 02, year: 2019}
+    summary: |
+      I joined IBM after my Ph. D. to work on the DARPA PERFECT project using a machine learning accelerator I developed during my Ph. D.  This was used for low voltage experiments aided by fault injection compiler passes I built.  I additionally conducted research into agile hardware design (languages and methodologies) to improve designer productivity on the DARPA DSSoC project.
   - company: NASA
     location: Pasadena, CA
     roles:
@@ -56,7 +59,9 @@ employment:
         dates:
           start: {day: 03, month: 06, year: 2013}
           end:   {day: 23, month: 08, year: 2013}
-  - company: Intel Corporation
+    summary: |
+      As part of my Ph. D funding, I spent three summers on-site at NASA Jet Propulsion Lab in the Advanced Robotic Controls Group.
+  - company: Intel
     location: Hudson, MA
     roles:
       - title: Graduate Technical Intern
@@ -67,6 +72,8 @@ employment:
         dates:
           start: {day: 20, month: 07, year: 2010}
           end:   {day: 27, month: 08, year: 2010}
+    summary: |
+      I, respectively, developed x86 hashing algorithms and performed DDR memory controller verification.
   - company: Boston University
     location: Boston, MA
     roles:
@@ -78,6 +85,8 @@ employment:
         dates:
           start: {day: 01, month: 01, year: 2009}
           end:   {day: 01, month: 05, year: 2009}
+    summary: |
+      For an undergraduate logic design course, I ran FPGA-based labs and proctored/graded exams.
 awards:
   - name: NASA Space Technology Research Fellowship
     date:

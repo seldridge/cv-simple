@@ -72,11 +72,15 @@
 = Education
 
 #let entry(item) = (
-    [#item.school], [#item.location], [#item.degree], [#item.major], [#item.year]
+    [#item.school],
+    [#item.location],
+    [#item.degrees.map(degree => emph(degree.degree)).join(linebreak())],
+    [#item.degrees.map(degree => emph(degree.major)).join(linebreak())],
+    [#item.degrees.map(degree => str(degree.year)).join(linebreak())]
 )
 
 #table(
-    columns: (2fr, 2fr, 1fr, 2fr, 1fr),
+    columns: (19%, 27%, 10%, 25%, 19%),
     align: (left, left, left, left, right),
     stroke: none,
     ..yamlDict.education
@@ -90,15 +94,27 @@
     datetime(year: int(date.year), month: int(date.month), day: int(date.day)).display("[month]/[year]")
 }
 
-#let entry(item) = (
+#let entry(item) = {
+  let cells = (
     [#item.company],
     [#item.location #if ("remote" in item) { "(remote)" }],
-    [#item.roles.map(role => emph[#role.title]).join(linebreak())],
-    [#item.roles.map(role => role.dates).map(date => (showDate(date.start), sym.dash.en, if ("end" in date) {showDate(date.end)} else {"Present"}).join()).join(linebreak())]
-)
+    [#item.roles.map(role => emph(role.title)).join(linebreak())],
+    [#item.roles.map(role => role.dates).map(date => (showDate(date.start), sym.dash.en, if ("end" in date) {showDate(date.end)} else {"Present"}).join()).join(linebreak())],
+  )
+
+  if ("summary" in item) {
+    cells.push(
+      table.cell(colspan: 4, inset: (left: 2em))[
+        #par(justify: true)[#item.summary]
+      ]
+    )
+  }
+
+  cells
+}
 
 #table(
-    columns: (20%, 26%, 35%, 19%),
+    columns: (19%, 27%, 35%, 19%),
     align: (left, left, left, left),
     stroke: none,
     ..yamlDict.employment
@@ -117,34 +133,6 @@
     align: (left, left),
     stroke: none,
     ..yamlDict.awards
-        .map(entry)
-        .flatten()
-)
-
-= Grants
-
-#let entry(item) = (
-    [#item.agency], [#item.name], [#item.number], [#item.role], [#(showDate(item.date.start), sym.dash.en, showDate(item.date.end)).join()]
-)
-
-#table(
-    columns: (1fr, 1fr, 1fr, 1fr, 1fr),
-    align: (left, left, left, left, left),
-    stroke: none,
-    ..yamlDict.grants
-        .map(entry)
-        .flatten()
-)
-
-= Program Committees and Reviews
-
-#let entry(item) = ([#item.name], [#item.role], [#item.year])
-
-#table(
-    columns: (62%, 33%, 5%),
-    align: (left, left, right),
-    stroke: none,
-    ..yamlDict.service
         .map(entry)
         .flatten()
 )
@@ -310,6 +298,34 @@
             .flatten()
     )
 ]
+
+= Grants
+
+#let entry(item) = (
+    [#item.agency], [#item.name], [#item.number], [#item.role], [#(showDate(item.date.start), sym.dash.en, showDate(item.date.end)).join()]
+)
+
+#table(
+    columns: (1fr, 1fr, 1fr, 1fr, 1fr),
+    align: (left, left, left, left, left),
+    stroke: none,
+    ..yamlDict.grants
+        .map(entry)
+        .flatten()
+)
+
+= Program Committees and Reviews
+
+#let entry(item) = ([#item.name], [#item.role], [#item.year])
+
+#table(
+    columns: (62%, 33%, 5%),
+    align: (left, left, right),
+    stroke: none,
+    ..yamlDict.service
+        .map(entry)
+        .flatten()
+)
 
 #if ("thesis-committees" in yamlDict) [
     = Thesis Committees

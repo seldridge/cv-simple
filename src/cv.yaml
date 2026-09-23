@@ -30,7 +30,7 @@ employment:
           start: {year: 2020, month: 9, day: 14}
           end: {year: 2022, month: 9, day: 15}
     summary: |
-      I joined SiFive on a team assembled around the fledgling LLVM CIRCT project.  I technically co-led the migration of SiFive's Verilog compiler for the Chisel hardware description language from a Scala-based one to a C++/MLIR-based one hosted in the CIRCT project providing 10x performance and memory improvements on all SiFive designs.  Since then, I've led a 3-person team that has extended Chisel and CIRCT with support for design verification (DV) and physical design (PD) concerns: Probes (whitebox access to internal signals), Layers, (optional, isolated code enabled via macros or SystemVerilog's bind instantiation), Automatic Testing (colocated tests inside designs that automatically execute for a given parameterization), and Domains (type annotations that encode design/PD intent, e.g., clock domain information, enabling inference of missing domain information, checking illegal domain crossings, and generation of PD collateral files for legal designs).
+      I co-led the migration of SiFive's Verilog compiler for the Chisel hardware description language from a Scala-based implementation to an MLIR-based one using and building the LLVM CIRCT project, achieving ~10x faster compilation and ~4x lower peak memory usage across a sweep of SiFive designs.  I now lead a three-person team extending Chisel/CIRCT with design verification and physical design capabilities, including probes for internal signal access, layers for optional collateral, design-colocated automated testing, and clock and power domain modeling.  I am also a maintainer of the open-source CIRCT and Chisel projects and the FIRRTL (Chisel's intermediate representation) specification.
   - company: IBM
     location: Yorktown Heights, NY
     roles:
@@ -43,7 +43,7 @@ employment:
           start: {day: 27, month: 08, year: 2016}
           end:   {day: 02, month: 02, year: 2019}
     summary: |
-      I joined IBM after my Ph. D. to work on the DARPA PERFECT project using a machine learning accelerator I developed during my Ph. D.  This was used for low voltage experiments aided by fault injection compiler passes I built.  I additionally conducted research into agile hardware design (languages and methodologies) to improve designer productivity on the DARPA DSSoC project.
+      I joined IBM after my Ph. D. to work on the DARPA PERFECT and, later, DSSoC projects.  I deployed a machine learning accelerator I developed during my Ph. D. for low-voltage experiments, developed compiler passes for hardware fault injection, and researched agile hardware design (languages and methodologies) to improve designer productivity.
   - company: NASA
     location: Pasadena, CA
     roles:
@@ -60,7 +60,7 @@ employment:
           start: {day: 03, month: 06, year: 2013}
           end:   {day: 23, month: 08, year: 2013}
     summary: |
-      As part of my Ph. D funding, I spent three summers on-site at NASA Jet Propulsion Lab in the Advanced Robotic Controls Group.
+      Through my Ph. D. fellowship, I spent three summers at NASA's Jet Propulsion Laboratory in the Advanced Robotic Controls Group.
   - company: Intel
     location: Hudson, MA
     roles:
@@ -73,7 +73,7 @@ employment:
           start: {day: 20, month: 07, year: 2010}
           end:   {day: 27, month: 08, year: 2010}
     summary: |
-      I, respectively, developed x86 hashing algorithms and performed DDR memory controller verification.
+      I developed x86 hashing algorithms and performed DDR memory controller verification.
   - company: Boston University
     location: Boston, MA
     roles:
@@ -86,7 +86,7 @@ employment:
           start: {day: 01, month: 01, year: 2009}
           end:   {day: 01, month: 05, year: 2009}
     summary: |
-      For an undergraduate logic design course, I ran FPGA-based labs and proctored/graded exams.
+      For an undergraduate logic design course, I ran FPGA-based labs and proctored and graded exams.
 awards:
   - name: NASA Space Technology Research Fellowship
     date:
@@ -152,7 +152,7 @@ maintainer:
     languages:
       - \CC
       - MLIR
-    description: CIRCT IR Compilers and Tools
+    description: Hardware compiler infrastructure
     citations:
       - none:conf/FCCM/Eldridge/2022
     statistics:
@@ -164,7 +164,7 @@ maintainer:
     host: https://github.com
     languages:
       - Scala
-    description: Scala-embedded hardware DSL
+    description: Scala-embedded hardware description language
     citations:
       - none:conf/FCCM/Eldridge/2022
       - none:workshop/CCC/eldridge/2020/becoming-a-chisel-developer
@@ -179,7 +179,8 @@ maintainer:
     host: https://github.com
     languages:
       - Markdown
-    description: Specification for the FIRRTL language
+      - \LaTeX
+    description: Specification for Chisel's intermediate representation
     statistics:
       commits: 218
       additions: 12845
@@ -205,16 +206,16 @@ contributor:
       commits: 9
       additions: 298
       deletions: 148
-  - organization: riscv
-    repository: riscv-tools
-    host: https://github.com
-    languages:
-      - Shell
-    description: RISC-V Tools (GNU Toolchain, ISA Simulator, Tests)
-    statistics:
-      commits: 3
-      additions: 3
-      deletions: 3
+  # - organization: riscv
+  #   repository: riscv-tools
+  #   host: https://github.com
+  #   languages:
+  #     - Shell
+  #   description: RISC-V Tools (GNU Toolchain, ISA Simulator, Tests)
+  #   statistics:
+  #     commits: 3
+  #     additions: 3
+  #     deletions: 3
   - organization: llvm
     repository: llvm-project
     host: https://github.com
@@ -225,56 +226,56 @@ contributor:
       commits: 3
       additions: 30
       deletions: 5
-  # - organization: freechipsproject
-  #   repository: chisel-testers
-  #   host: https://github.com
-  #   languages:
-  #     - Scala
-  #   description: Provides various testers for chisel users
-  #   statistics:
-  #     commits: 2
-  #     additions: 12
-  #     deletions: 4
-  # - organization: ucb-bar
-  #   repository: generator-bootcamp
-  #   host: https://github.com
-  #   languages:
-  #     - Scala
-  #   description: 'Generator Bootcamp Material: Learn Chisel the Right Way'
-  #   statistics:
-  #     commits: 2
-  #     additions: 8
-  #     deletions: 8
-  # - organization: ucb-bar
-  #   repository: chisel-testers2
-  #   host: https://github.com
-  #   languages:
-  #     - Scala
-  #   description: ChiselTest
-  #   statistics:
-  #     commits: 1
-  #     additions: 1
-  #     deletions: 1
-  # - organization: ccelio
-  #   repository: riscv-boom-doc
-  #   host: https://github.com
-  #   languages:
-  #     - \LaTeX
-  #   description: Documentation for the BOOM processor
-  #   statistics:
-  #     commits: 1
-  #     additions: 1
-  #     deletions: 1
-  # - organization: melpa
-  #   repository: melpa
-  #   host: https://github.com
-  #   languages:
-  #     - Emacs Lisp
-  #   description: Recipes and build machinery for the biggest Emacs package repo
-  #   statistics:
-  #     commits: 1
-  #     additions: 3
-  #     deletions: 0
+#   - organization: freechipsproject
+#     repository: chisel-testers
+#     host: https://github.com
+#     languages:
+#       - Scala
+#     description: Provides various testers for chisel users
+#     statistics:
+#       commits: 2
+#       additions: 12
+#       deletions: 4
+#   - organization: ucb-bar
+#     repository: generator-bootcamp
+#     host: https://github.com
+#     languages:
+#       - Scala
+#     description: 'Generator Bootcamp Material: Learn Chisel the Right Way'
+#     statistics:
+#       commits: 2
+#       additions: 8
+#       deletions: 8
+#   - organization: ucb-bar
+#     repository: chisel-testers2
+#     host: https://github.com
+#     languages:
+#       - Scala
+#     description: ChiselTest
+#     statistics:
+#       commits: 1
+#       additions: 1
+#       deletions: 1
+#   - organization: ccelio
+#     repository: riscv-boom-doc
+#     host: https://github.com
+#     languages:
+#       - \LaTeX
+#     description: Documentation for the BOOM processor
+#     statistics:
+#       commits: 1
+#       additions: 1
+#       deletions: 1
+#   - organization: melpa
+#     repository: melpa
+#     host: https://github.com
+#     languages:
+#       - Emacs Lisp
+#     description: Recipes and build machinery for the biggest Emacs package repo
+#     statistics:
+#       commits: 1
+#       additions: 3
+#       deletions: 0
 author:
   - organization: seldridge
     repository: verilog
@@ -328,35 +329,35 @@ author:
       - none:demo/CogArch/Roelke-2018
       - eldridge:2018:gomactech:velour
     stars: 39
-  - organization: IBM
-    repository: esp-chisel-accelerators
-    host: https://github.com
-    languages:
-      - Scala
-    description: Embedded Scalable Platform accelerator socket
-    citations:
-      - none:keynote/FOSDEM/eldridge/2020/esp-chisel-accelerators
-    stars: 25
-  - organization: IBM
-    repository: firrtl-mode
-    host: https://github.com
-    languages:
-      - Emacs Lisp
-    description: Major mode for editing FIRRTL files in Emacs
-    stars: 8
-  - organization: seldridge
-    repository: make-markdown
-    host: https://github.com
-    languages:
-      - Shell
-    description: Collecting personal knowledge in Markdown
-  - organization: seldridge
-    repository: cv-simple
-    host: https://github.com
-    languages:
-      - \LaTeX
-      - Typst
-    description: YAML-to-PDF CV (this document)
+  # - organization: IBM
+  #   repository: esp-chisel-accelerators
+  #   host: https://github.com
+  #   languages:
+  #     - Scala
+  #   description: Embedded Scalable Platform accelerator socket
+  #   citations:
+  #     - none:keynote/FOSDEM/eldridge/2020/esp-chisel-accelerators
+  #   stars: 25
+  # - organization: IBM
+  #   repository: firrtl-mode
+  #   host: https://github.com
+  #   languages:
+  #     - Emacs Lisp
+  #   description: Major mode for editing FIRRTL files in Emacs
+  #   stars: 8
+  # - organization: seldridge
+  #   repository: make-markdown
+  #   host: https://github.com
+  #   languages:
+  #     - Shell
+  #   description: Collecting personal knowledge in Markdown
+  # - organization: seldridge
+  #   repository: cv-simple
+  #   host: https://github.com
+  #   languages:
+  #     - \LaTeX
+  #     - Typst
+  #   description: YAML-to-PDF CV (this document)
 panels:
   - role: Panelist
     name: Building Efficient and Resilient AI Systems

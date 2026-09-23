@@ -69,26 +69,7 @@
 
 #refsection(style: numeric-style(), [
 
-= Education
-
-#let entry(item) = (
-    [#item.school],
-    [#item.location],
-    [#item.degrees.map(degree => emph(degree.degree)).join(linebreak())],
-    [#item.degrees.map(degree => emph(degree.major)).join(linebreak())],
-    [#item.degrees.map(degree => str(degree.year)).join(linebreak())]
-)
-
-#table(
-    columns: (19%, 27%, 10%, 25%, 19%),
-    align: (left, left, left, left, right),
-    stroke: none,
-    ..yamlDict.education
-        .map(entry)
-        .flatten()
-)
-
-= Employment History
+= Experience
 
 #let showDate(date) = {
     datetime(year: int(date.year), month: int(date.month), day: int(date.day)).display("[month]/[year]")
@@ -122,22 +103,24 @@
         .flatten()
 )
 
-= Honors, Awards, and Fellowships
+= Education
 
 #let entry(item) = (
-    [#item.name], [#if ("start" in item.date) {(showDate(item.date.start), sym.dash.en, showDate(item.date.end)).join()} else {showDate(item.date)}]
+    [#item.school],
+    [#item.location],
+    [#item.degrees.map(degree => emph(degree.degree)).join(linebreak())],
+    [#item.degrees.map(degree => emph(degree.major)).join(linebreak())],
+    [#item.degrees.map(degree => str(degree.year)).join(linebreak())]
 )
 
 #table(
-    columns: (0.81fr, 0.19fr),
-    align: (left, left),
+    columns: (19%, 27%, 10%, 25%, 19%),
+    align: (left, left, left, left, right),
     stroke: none,
-    ..yamlDict.awards
+    ..yamlDict.education
         .map(entry)
         .flatten()
 )
-
-= Open Source Activities (GitHub)
 
 #let repo(item) = (
     tt(link((item.host, "/", item.organization, "/", item.repository).join())[#(item.organization)/#(item.repository)])
@@ -175,12 +158,14 @@
     stats(item.statistics)
 )
 
+= Open Source Activities
+
 #if ("maintainer" in yamlDict) [
     == Maintainer
 
     #table(
         columns: (28%, 12%, 28%, 32%),
-        align: (left, left, left, left),
+        align: (left, left, left, right),
         stroke: none,
         ..yamlDict.maintainer
             .map(entry)
@@ -189,7 +174,7 @@
 ]
 
 #if ("contributor" in yamlDict) [
-    == Contributor
+    == Selected Contributions
 
     #table(
         columns: (28%, 12%, 28%, 32%),
@@ -202,7 +187,7 @@
 ]
 
 #if ("author" in yamlDict) [
-    == Author
+    == Selected Authored Projects
 
     #let entry(item) = (
         repo(item),
@@ -220,8 +205,6 @@
             .flatten()
     )
 ]
-
-#pagebreak()
 
 = Publications
 
@@ -323,6 +306,21 @@
     align: (left, left, right),
     stroke: none,
     ..yamlDict.service
+        .map(entry)
+        .flatten()
+)
+
+= Honors, Awards, and Fellowships
+
+#let entry(item) = (
+    [#item.name], [#if ("start" in item.date) {(showDate(item.date.start), sym.dash.en, showDate(item.date.end)).join()} else {showDate(item.date)}]
+)
+
+#table(
+    columns: (0.81fr, 0.19fr),
+    align: (left, left),
+    stroke: none,
+    ..yamlDict.awards
         .map(entry)
         .flatten()
 )
